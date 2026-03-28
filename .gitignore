@@ -1,0 +1,32 @@
+#################
+#               #
+#   project/    #
+#               #
+#################
+
+
+# Godot 4+ specific ignores
+project/.godot/
+project/.nomedia
+
+# Godot-specific ignores
+project/.import/
+project/export.cfg
+project/export_credentials.cfg
+project/*.tmp
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+project/.mono/
+project/data_*/
+project/mono_crash.*.json
+
+#################
+#               #
+#      src/     #
+#               #
+#################
+
+src/*.os

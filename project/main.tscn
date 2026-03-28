@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cpjrnq5r6dy50"]
+
+[ext_resource type="Texture2D" uid="uid://bhga3jyvl14vr" path="res://icon.svg" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=2104323503]
+
+[node name="Minion" type="Minion" parent="." unique_id=1523433371]
+position = Vector2(12.45519, 19.827442)
+texture = ExtResource("1_ig7tw")
+centered = false
