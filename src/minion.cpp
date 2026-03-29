@@ -1,22 +1,59 @@
+#include <optional>
+
 #include "minion.h"
 #include <godot_cpp/core/class_db.hpp>
+#include <godot_cpp/classes/input_event_mouse_button.hpp>
 
 using namespace godot;
 
-void Minion::_bind_methods() {
-}
 
 Minion::Minion() {
-	time_passed = 0.0;
+	speed = 20.0;
+    destination = std::nullopt;
 }
 
 Minion::~Minion() {
 }
 
+void Minion::set_speed(const double p_speed) {
+    speed = p_speed;
+}
+
+double Minion::get_speed() const {
+    return speed;
+}
+
+void Minion::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_speed"), &Minion::get_speed);
+    ClassDB::bind_method(D_METHOD("set_speed", "p_speed"), &Minion::set_speed);
+
+    ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "speed"), "set_speed", "get_speed");
+}
+
+
+void Minion::_input(const Ref<InputEvent> &event) {
+    Ref<InputEventMouseButton> mouse_click = event;
+
+    if (mouse_click.is_valid()) {
+        if (mouse_click->get_button_index() == MOUSE_BUTTON_LEFT) {
+            if (mouse_click->is_pressed()) {
+                destination = get_global_mouse_position();
+            }
+        }
+    }
+}
+
+
+void Minion::move(double delta) {
+    if (destination.has_value()) {
+        Vector2 position = get_global_position();
+        Vector2 direction = (destination.value() - position).normalized();
+        Vector2 velocity = speed * direction;
+        Vector2 new_position = position + velocity * delta;
+        set_position(new_position);
+    }
+}
+
 void Minion::_process(double delta) {
-	time_passed += delta;
-
-	Vector2 new_position = Vector2(10.0 + (10.0 * sin(time_passed * 2.0)), 10.0 + (10.0 * cos(time_passed * 1.5)));
-
-	set_position(new_position);
+    move(delta);
 }

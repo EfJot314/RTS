@@ -4,7 +4,8 @@
 
 [node name="Main" type="Node2D" unique_id=2104323503]
 
-[node name="Minion" type="Minion" parent="." unique_id=1523433371]
-position = Vector2(12.45519, 19.827442)
+[node name="Minion" type="Minion" parent="." unique_id=602379912]
+speed = 150.0
+position = Vector2(521, 245)
 texture = ExtResource("1_ig7tw")
 centered = false
