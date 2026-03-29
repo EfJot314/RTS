@@ -13,6 +13,8 @@ class Minion : public Sprite2D {
 	GDCLASS(Minion, Sprite2D)
 
 private:
+    bool selected = false;
+    Sprite2D* selection_circle = nullptr;
 	double speed;
     std::optional<Vector2> destination;
 
@@ -27,10 +29,13 @@ public:
 
     void set_speed(const double p_speed);
     double get_speed() const;
+    void highlight(bool highlight);
+
+    void set_destination(Vector2 target);
 
 	void _input(const Ref<InputEvent> &event) override;
+	void _ready() override;
 	void _process(double delta) override;
 };
 
-} // namespace godot
-
+}

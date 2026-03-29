@@ -1,11 +1,51 @@
 [gd_scene format=3 uid="uid://cpjrnq5r6dy50"]
 
 [ext_resource type="Texture2D" uid="uid://bhga3jyvl14vr" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://csx7iwc0kun6g" path="res://select-circle.svg" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=2104323503]
 
 [node name="Minion" type="Minion" parent="." unique_id=602379912]
-speed = 150.0
-position = Vector2(521, 245)
+speed = 50.0
+position = Vector2(323, 160)
 texture = ExtResource("1_ig7tw")
-centered = false
+
+[node name="Selection" type="Sprite2D" parent="Minion" unique_id=57329354]
+visible = false
+position = Vector2(-1, 62)
+scale = Vector2(0.185, 0.08812507)
+texture = ExtResource("2_0xm2m")
+
+[node name="SelectionManager" type="SelectionManager" parent="." unique_id=77668854]
+
+[node name="Minion2" type="Minion" parent="." unique_id=186240104]
+speed = 100.0
+position = Vector2(971, 172)
+texture = ExtResource("1_ig7tw")
+
+[node name="Selection" type="Sprite2D" parent="Minion2" unique_id=1962188018]
+visible = false
+position = Vector2(-1, 62)
+scale = Vector2(0.185, 0.08812507)
+texture = ExtResource("2_0xm2m")
+
+[node name="Minion3" type="Minion" parent="." unique_id=1634072891]
+position = Vector2(646, 320)
+texture = ExtResource("1_ig7tw")
+
+[node name="Selection" type="Sprite2D" parent="Minion3" unique_id=1005207627]
+visible = false
+position = Vector2(-1, 62)
+scale = Vector2(0.185, 0.08812507)
+texture = ExtResource("2_0xm2m")
+
+[node name="Minion4" type="Minion" parent="." unique_id=1731951315]
+speed = 75.0
+position = Vector2(262, 459)
+texture = ExtResource("1_ig7tw")
+
+[node name="Selection" type="Sprite2D" parent="Minion4" unique_id=451746981]
+visible = false
+position = Vector2(-1, 62)
+scale = Vector2(0.185, 0.08812507)
+texture = ExtResource("2_0xm2m")

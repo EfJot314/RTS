@@ -1,6 +1,4 @@
-#include "register_types.h"
-
-#include "minion.h"
+#include "selection_manager.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -13,6 +11,7 @@ void initialize_rts_module(ModuleInitializationLevel p_level) {
 		return;
 	}
 
+	GDREGISTER_CLASS(SelectionManager);
 	GDREGISTER_CLASS(Minion);
 }
 

@@ -1,6 +1,7 @@
 #include <optional>
 
 #include "minion.h"
+
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/classes/input_event_mouse_button.hpp>
 
@@ -23,6 +24,10 @@ double Minion::get_speed() const {
     return speed;
 }
 
+void Minion::set_destination(Vector2 target) {
+    destination = target;
+}
+
 void Minion::_bind_methods() {
     ClassDB::bind_method(D_METHOD("get_speed"), &Minion::get_speed);
     ClassDB::bind_method(D_METHOD("set_speed", "p_speed"), &Minion::set_speed);
@@ -31,18 +36,21 @@ void Minion::_bind_methods() {
 }
 
 
-void Minion::_input(const Ref<InputEvent> &event) {
-    Ref<InputEventMouseButton> mouse_click = event;
+void Minion::_input(const Ref<InputEvent> &event) {}
 
-    if (mouse_click.is_valid()) {
-        if (mouse_click->get_button_index() == MOUSE_BUTTON_LEFT) {
-            if (mouse_click->is_pressed()) {
-                destination = get_global_mouse_position();
-            }
-        }
-    }
+void Minion::_ready() {
+    add_to_group("minions");
+    UtilityFunctions::print("Added to group");
+    selection_circle = get_node<Sprite2D>("Selection");
 }
 
+void Minion::highlight(bool highlight) {
+    UtilityFunctions::print("Highlighted");
+    selected = highlight;
+    if (selection_circle) {
+        selection_circle->set_visible(selected);
+    }
+}
 
 void Minion::move(double delta) {
     if (destination.has_value()) {

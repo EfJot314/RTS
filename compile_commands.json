@@ -6460,5 +6460,11 @@
         "directory": "/home/efjot/projects/cpp/godot/rts",
         "file": "src/register_types.cpp",
         "output": "src/register_types.os"
+    },
+    {
+        "command": "g++ -o src/selection_manager.os -c -fno-gnu-unique -std=c++17 -fno-exceptions -fPIC -Wwrite-strings -m64 -march=x86-64 -fvisibility=hidden -O2 -fPIC -DLINUX_ENABLED -DUNIX_ENABLED -DTHREADS_ENABLED -DHOT_RELOAD_ENABLED -DDEBUG_ENABLED -DNDEBUG -DGDEXTENSION -Igodot-cpp/include -Igodot-cpp/gen/include -Isrc src/selection_manager.cpp",
+        "directory": "/home/efjot/projects/cpp/godot/rts",
+        "file": "src/selection_manager.cpp",
+        "output": "src/selection_manager.os"
     }
 ]
