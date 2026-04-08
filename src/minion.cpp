@@ -52,12 +52,32 @@ void Minion::_input(const Ref<InputEvent> &event) {}
 
 void Minion::_ready() {
     add_to_group("minions");
-    UtilityFunctions::print("Added to group");
     selection_circle = get_node<Sprite2D>("Selection");
+    health_bar = get_node<ProgressBar>("Health");
+    if (health_bar) {
+        UtilityFunctions::print("Health found");
+        health_bar->set_max(health);
+        health_bar->set_value(health);
+    }
+}
+
+void Minion::update_health_bar() {
+    if (health_bar) {
+        health_bar->set_value(health);
+    }
+}
+
+void Minion::hit(const double dmg) {
+    health -= dmg;
+
+    update_health_bar();
+
+    if (health <= 0) {
+        queue_free();
+    }
 }
 
 void Minion::highlight(bool highlight) {
-    UtilityFunctions::print("Highlighted");
     selected = highlight;
     if (selection_circle) {
         selection_circle->set_visible(selected);
@@ -74,6 +94,21 @@ void Minion::move(double delta) {
     }
 }
 
+void Minion::hit_all(double delta) {
+    TypedArray<Area2D> overlaps = get_overlapping_areas();
+
+    for (int i = 0; i < overlaps.size(); i++) {
+        Area2D *area = Object::cast_to<Area2D>(overlaps[i]);
+        Minion *other = Object::cast_to<Minion>(area);
+
+        if (other && other->get_side() != side) {
+            double damage = damage_per_second * delta;
+            other->hit(damage);
+        }
+    }
+}
+
 void Minion::_process(double delta) {
     move(delta);
+    hit_all(delta);
 }

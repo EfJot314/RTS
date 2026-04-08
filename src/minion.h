@@ -5,19 +5,24 @@
 #include <godot_cpp/classes/global_constants.hpp>
 #include <godot_cpp/variant/utility_functions.hpp>
 #include <godot_cpp/classes/sprite2d.hpp>
+#include <godot_cpp/classes/area2d.hpp>
 #include <godot_cpp/classes/input_event.hpp>
+#include <godot_cpp/classes/progress_bar.hpp>
 
 namespace godot {
 
-class Minion : public Sprite2D {
-	GDCLASS(Minion, Sprite2D)
+class Minion : public Area2D {
+	GDCLASS(Minion, Area2D)
 
 private:
     int side;
     bool selected = false;
-    Sprite2D* selection_circle = nullptr;
+    double damage_per_second = 10;
+    double health = 100;
 	double speed;
     std::optional<Vector2> destination;
+    Sprite2D* selection_circle = nullptr;
+    ProgressBar* health_bar = nullptr;
 
 protected:
 	void move(double delta);
@@ -34,7 +39,11 @@ public:
     void set_side(const int p_side);
     int get_side() const;
 
+    void hit_all(double delta);
+    void hit(const double dmg);
+
     void highlight(bool highlight);
+    void update_health_bar();
 
     void set_destination(Vector2 target);
 
