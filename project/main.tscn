@@ -5,47 +5,30 @@
 
 [node name="Main" type="Node2D" unique_id=2104323503]
 
-[node name="Minion" type="Minion" parent="." unique_id=602379912]
-speed = 50.0
-position = Vector2(323, 160)
-texture = ExtResource("1_ig7tw")
+[node name="SelectionManager" type="SelectionManager" parent="." unique_id=488277095]
 
-[node name="Selection" type="Sprite2D" parent="Minion" unique_id=57329354]
-visible = false
-position = Vector2(-1, 62)
-scale = Vector2(0.185, 0.08812507)
-texture = ExtResource("2_0xm2m")
-
-[node name="SelectionManager" type="SelectionManager" parent="." unique_id=77668854]
-
-[node name="Minion2" type="Minion" parent="." unique_id=186240104]
+[node name="Minion" type="Minion" parent="." unique_id=2037292940]
 speed = 100.0
-position = Vector2(971, 172)
+side = 0
+position = Vector2(299, 207)
 texture = ExtResource("1_ig7tw")
 
-[node name="Selection" type="Sprite2D" parent="Minion2" unique_id=1962188018]
+[node name="Selection" type="Sprite2D" parent="Minion" unique_id=1450929238]
 visible = false
-position = Vector2(-1, 62)
-scale = Vector2(0.185, 0.08812507)
+z_index = -1
+position = Vector2(0.99993896, 56)
+scale = Vector2(0.2125, 0.0975)
 texture = ExtResource("2_0xm2m")
 
-[node name="Minion3" type="Minion" parent="." unique_id=1634072891]
-position = Vector2(646, 320)
+[node name="Minion2" type="Minion" parent="." unique_id=738359356]
+speed = 90.0
+side = 1
+position = Vector2(598, 414)
 texture = ExtResource("1_ig7tw")
 
-[node name="Selection" type="Sprite2D" parent="Minion3" unique_id=1005207627]
+[node name="Selection" type="Sprite2D" parent="Minion2" unique_id=426404051]
 visible = false
-position = Vector2(-1, 62)
-scale = Vector2(0.185, 0.08812507)
-texture = ExtResource("2_0xm2m")
-
-[node name="Minion4" type="Minion" parent="." unique_id=1731951315]
-speed = 75.0
-position = Vector2(262, 459)
-texture = ExtResource("1_ig7tw")
-
-[node name="Selection" type="Sprite2D" parent="Minion4" unique_id=451746981]
-visible = false
-position = Vector2(-1, 62)
-scale = Vector2(0.185, 0.08812507)
+z_index = -1
+position = Vector2(0.99993896, 56)
+scale = Vector2(0.2125, 0.0975)
 texture = ExtResource("2_0xm2m")

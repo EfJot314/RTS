@@ -15,6 +15,7 @@ project/export.cfg
 project/export_credentials.cfg
 project/*.tmp
 project/*.so
+project/bin/*.so
 
 # Imported translations (automatically generated from CSV files)
 *.translation

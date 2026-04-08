@@ -24,6 +24,14 @@ double Minion::get_speed() const {
     return speed;
 }
 
+void Minion::set_side(const int p_side) {
+    side = p_side;
+}
+
+int Minion::get_side() const {
+    return side;
+}
+
 void Minion::set_destination(Vector2 target) {
     destination = target;
 }
@@ -32,7 +40,11 @@ void Minion::_bind_methods() {
     ClassDB::bind_method(D_METHOD("get_speed"), &Minion::get_speed);
     ClassDB::bind_method(D_METHOD("set_speed", "p_speed"), &Minion::set_speed);
 
+    ClassDB::bind_method(D_METHOD("get_side"), &Minion::get_side);
+    ClassDB::bind_method(D_METHOD("set_side", "p_side"), &Minion::set_side);
+
     ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "speed"), "set_speed", "get_speed");
+    ADD_PROPERTY(PropertyInfo(Variant::INT, "side", PROPERTY_HINT_ENUM, "Player,Enemy"), "set_side", "get_side");
 }
 
 
