@@ -12,11 +12,14 @@ class SelectionManager : public Node2D {
 
 private:
     bool selecting = false;
+    int side;
     Vector2 start;
     Vector2 end;
     Rect2 selection;
     TypedArray<Minion> selected_minions;
     std::optional<Vector2> destination;
+
+    void check_selecting_side();
 
 protected:
     static void _bind_methods();

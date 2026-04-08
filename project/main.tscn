@@ -5,7 +5,7 @@
 
 [node name="Main" type="Node2D" unique_id=2104323503]
 
-[node name="SelectionManager" type="SelectionManager" parent="." unique_id=488277095]
+[node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
 
 [node name="Minion" type="Minion" parent="." unique_id=2037292940]
 speed = 100.0

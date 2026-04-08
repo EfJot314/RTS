@@ -29,7 +29,7 @@ void SelectionManager::select_minions() {
     for (int i = 0; i < all_minions.size(); i++) {
         Minion *minion = Object::cast_to<Minion>(all_minions[i]);
 
-        if (minion) {
+        if (minion && minion->get_side() == side) {
             if (selection.has_point(minion->get_global_position())) {
                 add_to_selected(minion);
             }
@@ -60,6 +60,32 @@ void SelectionManager::set_destinations() {
     }
 }
 
+void SelectionManager::check_selecting_side() {
+    Input *input = Input::get_singleton();
+    if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_1)) {
+        side = 1;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_2)) {
+        side = 2;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_3)) {
+        side = 3;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_4)) {
+        side = 4;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_5)) {
+        side = 5;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_6)) {
+        side = 6;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_7)) {
+        side = 7;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_8)) {
+        side = 8;
+    } else if (input->is_key_pressed(KEY_SHIFT) && input->is_key_pressed(KEY_9)) {
+        side = 9;
+    } else {
+        // default -> Player
+        side = 0;
+    }
+}
+
 void SelectionManager::_input(const Ref<InputEvent> &event) {
     Ref<InputEventMouseButton> mouse_click = event;
 
@@ -70,6 +96,7 @@ void SelectionManager::_input(const Ref<InputEvent> &event) {
                 clear_selected();
                 start = get_global_mouse_position();
                 end = start;
+                check_selecting_side();
             } else {
                 selecting = false;
                 select_minions();
@@ -97,7 +124,14 @@ void SelectionManager::_input(const Ref<InputEvent> &event) {
 
 
 void SelectionManager::_draw() {
+    Color color;
+    if (side == 0) {
+        color = Color(0, 1, 0, 0.8);
+    } else {
+        color = Color(1, 0, 0, 0.8);
+    }
+
     if (selecting) {
-        draw_rect(selection, Color(0, 1, 0, 0.8), false, 2.0);
+        draw_rect(selection, color, false, 2.0);
     }
 }
