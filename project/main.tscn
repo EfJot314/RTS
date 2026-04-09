@@ -24,6 +24,7 @@ offset_right = 61.0
 offset_bottom = 33.0
 value = 100.0
 fill_mode = 3
+show_percentage = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Minion" unique_id=73679874]
 scale = Vector2(0.6484375, 0.703125)
@@ -53,6 +54,7 @@ offset_right = 61.0
 offset_bottom = 33.0
 value = 100.0
 fill_mode = 3
+show_percentage = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Minion2" unique_id=1298509083]
 scale = Vector2(0.6484375, 0.703125)

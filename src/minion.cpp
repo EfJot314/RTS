@@ -87,10 +87,16 @@ void Minion::highlight(bool highlight) {
 void Minion::move(double delta) {
     if (destination.has_value()) {
         Vector2 position = get_global_position();
-        Vector2 direction = (destination.value() - position).normalized();
+        Vector2 destination_vector = destination.value() - position;
+        Vector2 direction = destination_vector.normalized();
         Vector2 velocity = speed * direction;
-        Vector2 new_position = position + velocity * delta;
+        Vector2 position_delta = velocity * delta;
+        Vector2 new_position = position + position_delta;
         set_position(new_position);
+
+        if (destination_vector.length() < position_delta.length()) {
+            destination = std::nullopt;
+        }
     }
 }
 
