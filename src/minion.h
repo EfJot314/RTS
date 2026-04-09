@@ -15,7 +15,7 @@ class Minion : public Area2D {
 	GDCLASS(Minion, Area2D)
 
 private:
-    int side;
+    int side = 0;
     bool selected = false;
     double damage_per_second = 10;
     double health = 100;

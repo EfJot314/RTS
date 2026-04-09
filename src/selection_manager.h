@@ -20,6 +20,7 @@ private:
     std::optional<Vector2> destination;
 
     void check_selecting_side();
+    TypedArray<Vector2> get_destinations(int n);
 
 protected:
     static void _bind_methods();

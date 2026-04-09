@@ -11,8 +11,6 @@ radius = 97.082436
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
 
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
-speed = 100.0
-side = 0
 position = Vector2(158, 118)
 disable_mode = 2
 
@@ -41,8 +39,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion2" type="Minion" parent="." unique_id=1425974395]
-speed = 90.0
-side = 1
 position = Vector2(310, 424)
 disable_mode = 2
 
@@ -68,4 +64,60 @@ scale = Vector2(0.13937496, 0.049999923)
 texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minion2" unique_id=915943858]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion3" type="Minion" parent="." unique_id=1689793559]
+position = Vector2(701, 160)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion3" unique_id=188787774]
+z_index = 1
+offset_left = 50.0
+offset_top = -34.0
+offset_right = 61.0
+offset_bottom = 33.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion3" unique_id=1240467088]
+scale = Vector2(0.6484375, 0.703125)
+texture = ExtResource("1_ig7tw")
+
+[node name="Selection" type="Sprite2D" parent="Minion3" unique_id=1590801746]
+visible = false
+z_index = -1
+position = Vector2(0, 49)
+scale = Vector2(0.13937496, 0.049999923)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion3" unique_id=1828126274]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion4" type="Minion" parent="." unique_id=2017304627]
+position = Vector2(534, 448)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion4" unique_id=1347723367]
+z_index = 1
+offset_left = 50.0
+offset_top = -34.0
+offset_right = 61.0
+offset_bottom = 33.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion4" unique_id=1380885793]
+scale = Vector2(0.6484375, 0.703125)
+texture = ExtResource("1_ig7tw")
+
+[node name="Selection" type="Sprite2D" parent="Minion4" unique_id=1194199819]
+visible = false
+z_index = -1
+position = Vector2(0, 49)
+scale = Vector2(0.13937496, 0.049999923)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion4" unique_id=1116450222]
 shape = SubResource("CircleShape2D_0xm2m")

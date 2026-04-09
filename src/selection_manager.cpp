@@ -1,5 +1,7 @@
 #include "selection_manager.h"
 
+#include <cmath>
+
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/classes/input.hpp>
 #include <godot_cpp/classes/input_event_mouse_button.hpp>
@@ -23,8 +25,6 @@ void SelectionManager::add_to_selected(Minion* p_minion) {
 
 void SelectionManager::select_minions() {
     TypedArray<Node> all_minions = get_tree()->get_nodes_in_group("minions");
-
-    UtilityFunctions::print("Selecting...");
 
     for (int i = 0; i < all_minions.size(); i++) {
         Minion *minion = Object::cast_to<Minion>(all_minions[i]);
@@ -51,11 +51,42 @@ TypedArray<Minion> SelectionManager::get_selected_minions() const {
     return selected_minions;
 }
 
+TypedArray<Vector2> SelectionManager::get_destinations(int n) {
+    TypedArray<Vector2> result;
+    Vector2 dest = destination.value();
+
+    double r = 150.0;
+
+    double a = 0;
+    double curr_r = 0;
+    double dphi = 0;
+    for (int i = 0; i < n; i++) {
+        if (i > a) {
+            a += 4;
+            curr_r = a * r / 4.0;
+            dphi = 2 * M_PI / a;
+        }
+        double phi = (i - (a - 4)) * dphi;
+
+        double x = dest.x + curr_r * std::cos(phi);
+        double y = dest.y + curr_r * std::sin(phi);
+
+        result.append(Vector2(x,y));
+    }
+
+    return result;
+}
+
 void SelectionManager::set_destinations() {
-    for (int i = 0; i < selected_minions.size(); i++) {
-        Minion *minion = Object::cast_to<Minion>(selected_minions[i]);
-        if (minion && destination.has_value()) {
-            minion->set_destination(destination.value());
+    if (destination.has_value()) {
+        int n = selected_minions.size();
+        TypedArray<Vector2> positions = get_destinations(n);
+        for (int i = 0; i < n; i++) {
+            Minion *minion = Object::cast_to<Minion>(selected_minions[i]);
+            Vector2 position = positions[i];
+            if (minion) {
+                minion->set_destination(position);
+            }
         }
     }
 }
@@ -104,7 +135,6 @@ void SelectionManager::_input(const Ref<InputEvent> &event) {
             }
         } else if (mouse_click->get_button_index() == MOUSE_BUTTON_RIGHT) {
             if (mouse_click->is_pressed()) {
-                UtilityFunctions::print("Setting target");
                 destination = get_global_mouse_position();
                 set_destinations();
             }
