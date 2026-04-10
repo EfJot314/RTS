@@ -24,6 +24,14 @@ double Minion::get_speed() const {
     return speed;
 }
 
+void Minion::set_health(const double p_health) {
+    max_health = p_health;
+}
+
+double Minion::get_health() const {
+    return max_health;
+}
+
 void Minion::set_side(const int p_side) {
     side = p_side;
 }
@@ -43,8 +51,12 @@ void Minion::_bind_methods() {
     ClassDB::bind_method(D_METHOD("get_side"), &Minion::get_side);
     ClassDB::bind_method(D_METHOD("set_side", "p_side"), &Minion::set_side);
 
+    ClassDB::bind_method(D_METHOD("get_health"), &Minion::get_health);
+    ClassDB::bind_method(D_METHOD("set_health", "p_health"), &Minion::set_health);
+
     ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "speed"), "set_speed", "get_speed");
     ADD_PROPERTY(PropertyInfo(Variant::INT, "side", PROPERTY_HINT_ENUM, "Player,Enemy"), "set_side", "get_side");
+    ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "max_health"), "set_health", "get_health");
 }
 
 
@@ -55,9 +67,9 @@ void Minion::_ready() {
     selection_circle = get_node<Sprite2D>("Selection");
     health_bar = get_node<ProgressBar>("Health");
     if (health_bar) {
-        UtilityFunctions::print("Health found");
-        health_bar->set_max(health);
-        health_bar->set_value(health);
+        health_bar->set_max(max_health);
+        health = max_health;
+        update_health_bar();
     }
 }
 
@@ -65,6 +77,17 @@ void Minion::update_health_bar() {
     if (health_bar) {
         health_bar->set_value(health);
     }
+
+    // TODO -> change to more 'continous' color change
+    Color bar_color;
+    if (health / max_health > 0.7) {
+        bar_color = Color(0, 1, 0);
+    } else if (health / max_health > 0.3) {
+        bar_color = Color(1, 1, 0);
+    } else {
+        bar_color = Color(1, 0, 0);
+    }
+    health_bar->set_modulate(bar_color);
 }
 
 void Minion::hit(const double dmg) {

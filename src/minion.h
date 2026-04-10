@@ -18,6 +18,7 @@ private:
     int side = 0;
     bool selected = false;
     double damage_per_second = 10;
+    double max_health = 100;
     double health = 100;
 	double speed = 100;
     std::optional<Vector2> destination;
@@ -38,6 +39,9 @@ public:
 
     void set_side(const int p_side);
     int get_side() const;
+
+    void set_health(const double p_health);
+    double get_health() const;
 
     void hit_all(double delta);
     void hit(const double dmg);
