@@ -14,7 +14,12 @@
 
 using namespace godot;
 
-void SelectionManager::_bind_methods() {}
+void SelectionManager::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_r"), &SelectionManager::get_r);
+    ClassDB::bind_method(D_METHOD("set_r", "p_r"), &SelectionManager::set_r);
+
+    ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "radius"), "set_r", "get_r");
+}
 
 void SelectionManager::add_to_selected(Minion* p_minion) {
     if (p_minion && !selected_minions.has(p_minion)) {
@@ -54,8 +59,6 @@ TypedArray<Minion> SelectionManager::get_selected_minions() const {
 TypedArray<Vector2> SelectionManager::get_destinations(int n) {
     TypedArray<Vector2> result;
     Vector2 dest = destination.value();
-
-    double r = 150.0;
 
     double a = 0;
     double curr_r = 0;
@@ -152,6 +155,13 @@ void SelectionManager::_input(const Ref<InputEvent> &event) {
     }
 }
 
+void SelectionManager::set_r(const double p_r) {
+    r = p_r;
+}
+
+double SelectionManager::get_r() const{
+    return r;
+}
 
 void SelectionManager::_draw() {
     Color color;

@@ -9,8 +9,10 @@ radius = 97.082436
 [node name="Main" type="Node2D" unique_id=2104323503]
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
+radius = 100.0
 
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
+speed = 100.0
 position = Vector2(158, 118)
 disable_mode = 2
 
@@ -39,6 +41,8 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion2" type="Minion" parent="." unique_id=1425974395]
+speed = 100.0
+side = 1
 position = Vector2(310, 424)
 disable_mode = 2
 
@@ -67,6 +71,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion3" type="Minion" parent="." unique_id=1689793559]
+speed = 110.0
 position = Vector2(701, 160)
 disable_mode = 2
 
@@ -95,6 +100,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion4" type="Minion" parent="." unique_id=2017304627]
+speed = 120.0
 position = Vector2(534, 448)
 disable_mode = 2
 

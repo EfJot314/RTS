@@ -13,6 +13,7 @@ class SelectionManager : public Node2D {
 private:
     bool selecting = false;
     int side;
+    double r = 150;
     Vector2 start;
     Vector2 end;
     Rect2 selection;
@@ -30,6 +31,10 @@ public:
     void add_to_selected(Minion* p_minion);
     void select_minions();
     void clear_selected();
+
+    double get_r() const;
+    void set_r(const double r);
+
     void _input(const Ref<InputEvent> &event) override;
     void _draw() override;
     TypedArray<Minion> get_selected_minions() const;
