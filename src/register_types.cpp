@@ -1,4 +1,5 @@
 #include "selection_manager.h"
+#include "game_side.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -13,6 +14,8 @@ void initialize_rts_module(ModuleInitializationLevel p_level) {
 
 	GDREGISTER_CLASS(SelectionManager);
 	GDREGISTER_CLASS(Minion);
+	GDREGISTER_CLASS(Building);
+	GDREGISTER_CLASS(GameSide);
 }
 
 void uninitialize_rts_module(ModuleInitializationLevel p_level) {
