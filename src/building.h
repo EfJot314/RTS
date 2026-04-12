@@ -10,17 +10,51 @@ namespace godot {
 class Building : public Sprite2D {
     GDCLASS(Building, Sprite2D)
 
-private:
-    int side = 0;
-
 protected:
+    int side = 0;
+    double max_health = 500.0;
+    double health = 500.0;
     static void _bind_methods();
 
 public:
     int get_side() const;
     void set_side(const int p_side);
+    double get_health() const;
+    void set_health(const double p_health);
+
+    void _ready() override;
 
 };
 
+
+class Base : public Building {
+    GDCLASS(Base, Building)
+protected:
+    static void _bind_methods();
+};
+
+class Barracks : public Building {
+    GDCLASS(Barracks, Building)
+protected:
+    static void _bind_methods();
+};
+
+class Mine : public Building {
+    GDCLASS(Mine, Building)
+protected:
+    static void _bind_methods();
+};
+
+class CrystalsMine : public Mine {
+    GDCLASS(CrystalsMine, Mine)
+protected:
+    static void _bind_methods();
+};
+
+class GasMine : public Mine {
+    GDCLASS(GasMine, Mine)
+protected:
+    static void _bind_methods();
+};
 
 }

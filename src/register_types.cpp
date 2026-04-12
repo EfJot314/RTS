@@ -15,6 +15,11 @@ void initialize_rts_module(ModuleInitializationLevel p_level) {
 	GDREGISTER_CLASS(SelectionManager);
 	GDREGISTER_CLASS(Minion);
 	GDREGISTER_CLASS(Building);
+	GDREGISTER_CLASS(Base);
+	GDREGISTER_CLASS(Barracks);
+	GDREGISTER_CLASS(Mine);
+	GDREGISTER_CLASS(CrystalsMine);
+	GDREGISTER_CLASS(GasMine);
 	GDREGISTER_CLASS(GameSide);
 }
 

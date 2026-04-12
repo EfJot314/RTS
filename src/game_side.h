@@ -22,6 +22,8 @@ public:
 
     void add_building(Building* building);
 
+	void _input(const Ref<InputEvent> &event) override;
+
 };
 
 }
