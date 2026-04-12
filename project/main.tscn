@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cpjrnq5r6dy50"]
 
+[ext_resource type="Texture2D" uid="uid://cqs0nk0e50e51" path="res://Base_AI.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bhga3jyvl14vr" path="res://icon.svg" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://csx7iwc0kun6g" path="res://select-circle.svg" id="2_0xm2m"]
 
@@ -9,6 +10,11 @@ radius = 97.082436
 [node name="Main" type="Node2D" unique_id=2104323503]
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
+
+[node name="Base" type="Base" parent="." unique_id=1165611499]
+position = Vector2(985, 488)
+scale = Vector2(0.3242187, 0.31640628)
+texture = ExtResource("1_h2yge")
 
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
 position = Vector2(158, 118)
