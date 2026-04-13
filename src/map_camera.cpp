@@ -51,6 +51,7 @@ void MapCamera::_process(double delta) {
 
     set_position(get_position() + velocity * (float)delta);
 
+    // zoom
     Vector2 current_zoom = get_zoom();
     set_zoom(current_zoom.lerp(target_zoom, lerp_speed * delta));
 

@@ -35,6 +35,7 @@ texture = ExtResource("1_7mycd")
 centered = false
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
+radius = 40.0
 
 [node name="Base" type="Base" parent="." unique_id=1165611499]
 position = Vector2(319.00003, 275.00003)
@@ -53,7 +54,7 @@ texture = ExtResource("3_lquwl")
 
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
 speed = 100.0
-position = Vector2(495, 442)
+position = Vector2(550, 411)
 disable_mode = 2
 
 [node name="Health" type="ProgressBar" parent="Minion" unique_id=1195079942]
@@ -79,4 +80,274 @@ scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minion" unique_id=1517605881]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion2" type="Minion" parent="." unique_id=1724542851]
+speed = 100.0
+position = Vector2(566, 471)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion2" unique_id=217373534]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion2" unique_id=1782002174]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion2" unique_id=1665892656]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion2" unique_id=1932325386]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion3" type="Minion" parent="." unique_id=681245495]
+speed = 100.0
+position = Vector2(471, 399)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion3" unique_id=1516622289]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion3" unique_id=1425995468]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion3" unique_id=2038618663]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion3" unique_id=1265847963]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion4" type="Minion" parent="." unique_id=1299580054]
+speed = 100.0
+position = Vector2(518, 514)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion4" unique_id=268921380]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion4" unique_id=1398630310]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion4" unique_id=97058067]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion4" unique_id=681475407]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion5" type="Minion" parent="." unique_id=98863246]
+speed = 100.0
+position = Vector2(428, 444)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion5" unique_id=137054283]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion5" unique_id=352473178]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion5" unique_id=1998704154]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion5" unique_id=1808136528]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion6" type="Minion" parent="." unique_id=2057584973]
+speed = 100.0
+position = Vector2(406, 477)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion6" unique_id=95721353]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion6" unique_id=2114463811]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion6" unique_id=2014157618]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion6" unique_id=697457623]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion7" type="Minion" parent="." unique_id=647224293]
+speed = 100.0
+position = Vector2(469, 477)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion7" unique_id=1196921427]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion7" unique_id=256139374]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion7" unique_id=417818632]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion7" unique_id=926274143]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion8" type="Minion" parent="." unique_id=910656196]
+speed = 100.0
+position = Vector2(606, 428)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion8" unique_id=105534247]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion8" unique_id=1092300997]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion8" unique_id=1577664936]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion8" unique_id=2136240645]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion9" type="Minion" parent="." unique_id=61250424]
+speed = 100.0
+position = Vector2(517, 377)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion9" unique_id=1316418460]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion9" unique_id=1884103473]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion9" unique_id=108647682]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion9" unique_id=206154856]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Minion10" type="Minion" parent="." unique_id=1142287893]
+speed = 100.0
+position = Vector2(510, 446)
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="Minion10" unique_id=53642499]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Minion10" unique_id=1252555019]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
+
+[node name="Selection" type="Sprite2D" parent="Minion10" unique_id=890168046]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion10" unique_id=723548910]
 shape = SubResource("CircleShape2D_0xm2m")
