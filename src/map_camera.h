@@ -10,6 +10,11 @@ class MapCamera : public Camera2D {
 
 private:
     double speed = 200.0;
+    Vector2 target_zoom = Vector2(1.0, 1.0);
+    double zoom_speed = 0.1;
+    double min_zoom = 0.5;
+    double max_zoom = 2.0;
+    double lerp_speed = 10.0f;
 
     void clamp_position();
 

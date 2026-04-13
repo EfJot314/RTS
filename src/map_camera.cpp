@@ -50,6 +50,10 @@ void MapCamera::_process(double delta) {
     }
 
     set_position(get_position() + velocity * (float)delta);
+
+    Vector2 current_zoom = get_zoom();
+    set_zoom(current_zoom.lerp(target_zoom, lerp_speed * delta));
+
     clamp_position();
 }
 
@@ -58,8 +62,28 @@ void MapCamera::_unhandled_input(const Ref<InputEvent> &event) {
     Ref<InputEventMouseMotion> mouse_motion = event;
     Input* input = Input::get_singleton();
 
-    if (mouse_motion.is_valid() && input->is_mouse_button_pressed(MOUSE_BUTTON_RIGHT)) {
-        set_position(get_position() - mouse_motion->get_relative() * get_zoom());
-        clamp_position();
+    if (mouse_motion.is_valid()) {
+        if (input->is_mouse_button_pressed(MOUSE_BUTTON_RIGHT)) {
+            set_position(get_position() - mouse_motion->get_relative() * get_zoom());
+            clamp_position();
+        }
+    }
+
+    // zoom
+    Ref<InputEventMouseButton> mouse_btn = event;
+
+    if (mouse_btn.is_valid()) {
+        if (mouse_btn->is_pressed()) {
+            if (mouse_btn->get_button_index() == MOUSE_BUTTON_WHEEL_UP) {
+                target_zoom += Vector2(zoom_speed, zoom_speed);
+            }
+            if (mouse_btn->get_button_index() == MOUSE_BUTTON_WHEEL_DOWN) {
+                target_zoom -= Vector2(zoom_speed, zoom_speed);
+            }
+
+            // Ograniczamy zoom, żeby gracz nie przesadził
+            target_zoom.x = CLAMP(target_zoom.x, min_zoom, max_zoom);
+            target_zoom.y = CLAMP(target_zoom.y, min_zoom, max_zoom);
+        }
     }
 }
