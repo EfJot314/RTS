@@ -19,8 +19,8 @@ private:
     bool selected = false;
     double damage_per_second = 10;
     double max_health = 100;
-    double health = 100;
-	double speed = 100;
+    double health = 100.0;
+	double speed = 100.0;
     std::optional<Vector2> destination;
     Sprite2D* selection_circle = nullptr;
     ProgressBar* health_bar = nullptr;

@@ -1,5 +1,6 @@
 #include "selection_manager.h"
 #include "game_side.h"
+#include "map_camera.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -21,6 +22,7 @@ void initialize_rts_module(ModuleInitializationLevel p_level) {
 	GDREGISTER_CLASS(CrystalsMine);
 	GDREGISTER_CLASS(GasMine);
 	GDREGISTER_CLASS(GameSide);
+	GDREGISTER_CLASS(MapCamera);
 }
 
 void uninitialize_rts_module(ModuleInitializationLevel p_level) {

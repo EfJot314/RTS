@@ -1,133 +1,82 @@
 [gd_scene format=3 uid="uid://cpjrnq5r6dy50"]
 
-[ext_resource type="Texture2D" uid="uid://cqs0nk0e50e51" path="res://Base_AI.png" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://bhga3jyvl14vr" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://cynb4684l0oey" path="res://terrain1.png" id="1_7mycd"]
+[ext_resource type="Texture2D" uid="uid://b4qf7pp746cnx" path="res://background.png" id="1_272bh"]
+[ext_resource type="Texture2D" uid="uid://brj3burx0faml" path="res://base_ai.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://csx7iwc0kun6g" path="res://select-circle.svg" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://8te5hj5lfice" path="res://CrystalsMine_ai.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dufa5y6tsokrd" path="res://GasMine_ai.png" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://c7sxmye7px5vs" path="res://Robot_ai.png" id="4_lquwl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
-radius = 97.082436
+radius = 41.303753
 
 [node name="Main" type="Node2D" unique_id=2104323503]
+
+[node name="MapCamera" type="MapCamera" parent="." unique_id=2021836696]
+speed = 500.0
+position = Vector2(394, 329)
+limit_left = -500
+limit_top = -300
+limit_right = 4000
+limit_bottom = 2200
+
+[node name="Background" type="Sprite2D" parent="MapCamera" unique_id=1433787981]
+z_index = -100
+texture = ExtResource("1_272bh")
+
+[node name="GameSide" type="GameSide" parent="." unique_id=1519056741]
+position = Vector2(564, 490)
+
+[node name="Terrain" type="Sprite2D" parent="." unique_id=588008698]
+z_index = -20
+scale = Vector2(1.2386364, 1.2532552)
+texture = ExtResource("1_7mycd")
+centered = false
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
 
 [node name="Base" type="Base" parent="." unique_id=1165611499]
-position = Vector2(985, 488)
-scale = Vector2(0.3242187, 0.31640628)
+position = Vector2(319.00003, 275.00003)
+scale = Vector2(0.5361094, 0.51220316)
 texture = ExtResource("1_h2yge")
 
+[node name="CrystalsMine" type="CrystalsMine" parent="." unique_id=938199963]
+position = Vector2(799, 288)
+scale = Vector2(0.37200007, 0.37399995)
+texture = ExtResource("2_1bvp3")
+
+[node name="GasMine" type="GasMine" parent="." unique_id=606314273]
+position = Vector2(116, 492.00003)
+scale = Vector2(0.3209999, 0.35)
+texture = ExtResource("3_lquwl")
+
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
-position = Vector2(158, 118)
+speed = 100.0
+position = Vector2(495, 442)
 disable_mode = 2
 
 [node name="Health" type="ProgressBar" parent="Minion" unique_id=1195079942]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
-offset_left = 50.0
-offset_top = -34.0
-offset_right = 61.0
-offset_bottom = 33.0
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
 value = 100.0
 fill_mode = 3
 show_percentage = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Minion" unique_id=73679874]
-scale = Vector2(0.6484375, 0.703125)
-texture = ExtResource("1_ig7tw")
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("4_lquwl")
 
 [node name="Selection" type="Sprite2D" parent="Minion" unique_id=1464379356]
 visible = false
 z_index = -1
-position = Vector2(0, 49)
-scale = Vector2(0.13937496, 0.049999923)
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minion" unique_id=1517605881]
-shape = SubResource("CircleShape2D_0xm2m")
-
-[node name="Minion2" type="Minion" parent="." unique_id=1425974395]
-position = Vector2(310, 424)
-disable_mode = 2
-
-[node name="Health" type="ProgressBar" parent="Minion2" unique_id=1235562842]
-modulate = Color(0, 1, 0, 1)
-z_index = 1
-offset_left = 50.0
-offset_top = -34.0
-offset_right = 61.0
-offset_bottom = 33.0
-value = 100.0
-fill_mode = 3
-show_percentage = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Minion2" unique_id=1298509083]
-scale = Vector2(0.6484375, 0.703125)
-texture = ExtResource("1_ig7tw")
-
-[node name="Selection" type="Sprite2D" parent="Minion2" unique_id=1571310197]
-visible = false
-z_index = -1
-position = Vector2(0, 49)
-scale = Vector2(0.13937496, 0.049999923)
-texture = ExtResource("2_0xm2m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion2" unique_id=915943858]
-shape = SubResource("CircleShape2D_0xm2m")
-
-[node name="Minion3" type="Minion" parent="." unique_id=1689793559]
-position = Vector2(701, 160)
-disable_mode = 2
-
-[node name="Health" type="ProgressBar" parent="Minion3" unique_id=188787774]
-modulate = Color(0, 1, 0, 1)
-z_index = 1
-offset_left = 50.0
-offset_top = -34.0
-offset_right = 61.0
-offset_bottom = 33.0
-value = 100.0
-fill_mode = 3
-show_percentage = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Minion3" unique_id=1240467088]
-scale = Vector2(0.6484375, 0.703125)
-texture = ExtResource("1_ig7tw")
-
-[node name="Selection" type="Sprite2D" parent="Minion3" unique_id=1590801746]
-visible = false
-z_index = -1
-position = Vector2(0, 49)
-scale = Vector2(0.13937496, 0.049999923)
-texture = ExtResource("2_0xm2m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion3" unique_id=1828126274]
-shape = SubResource("CircleShape2D_0xm2m")
-
-[node name="Minion4" type="Minion" parent="." unique_id=2017304627]
-position = Vector2(534, 448)
-disable_mode = 2
-
-[node name="Health" type="ProgressBar" parent="Minion4" unique_id=1347723367]
-modulate = Color(0, 1, 0, 1)
-z_index = 1
-offset_left = 50.0
-offset_top = -34.0
-offset_right = 61.0
-offset_bottom = 33.0
-value = 100.0
-fill_mode = 3
-show_percentage = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Minion4" unique_id=1380885793]
-scale = Vector2(0.6484375, 0.703125)
-texture = ExtResource("1_ig7tw")
-
-[node name="Selection" type="Sprite2D" parent="Minion4" unique_id=1194199819]
-visible = false
-z_index = -1
-position = Vector2(0, 49)
-scale = Vector2(0.13937496, 0.049999923)
-texture = ExtResource("2_0xm2m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion4" unique_id=1116450222]
 shape = SubResource("CircleShape2D_0xm2m")
