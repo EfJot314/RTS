@@ -2,12 +2,12 @@
 
 #include "building.h"
 
-#include <godot_cpp/classes/node2d.hpp>
+#include <godot_cpp/classes/control.hpp>
 
 namespace godot {
 
-class GameSide : public Node2D {
-    GDCLASS(GameSide, Node2D)
+class GameSide : public Control {
+    GDCLASS(GameSide, Control)
 
 private:
     int side = 0;
@@ -22,7 +22,11 @@ public:
 
     void add_building(Building* building);
 
+    void on_building_button_pressed(String p_building_type);
+
 	void _input(const Ref<InputEvent> &event) override;
+
+    void _ready() override;
 
 };
 
