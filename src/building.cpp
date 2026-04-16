@@ -1,5 +1,8 @@
 #include "building.h"
 
+#include <godot_cpp/classes/input_event_mouse_button.hpp>
+#include <godot_cpp/classes/input_event_mouse_motion.hpp>
+
 using namespace godot;
 
 int Building::get_side() const {
@@ -31,6 +34,29 @@ void Building::_bind_methods() {
     ADD_PROPERTY(PropertyInfo(Variant::INT, "side", PROPERTY_HINT_ENUM, "Player,Enemy"), "set_side", "get_side");
     ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "max_health"), "set_health", "get_health");
 }
+
+void Building::_input(const Ref<InputEvent> &event) {
+    Ref<InputEventMouseButton> mouse_click = event;
+    if (mouse_click.is_valid()) {
+        if (mouse_click->get_button_index() == MOUSE_BUTTON_RIGHT && setting) {
+            if (mouse_click->is_pressed()) {
+                setting = false;
+            }
+        }
+    }
+
+
+    if (setting) {
+        Ref<InputEventMouseMotion> mouse_motion = event;
+        if (mouse_motion.is_valid()) {
+            Vector2 current_position = get_global_mouse_position();
+            set_position(current_position);
+        }
+    }
+
+}
+
+
 
 void Base::_bind_methods() {}
 void Barracks::_bind_methods() {}

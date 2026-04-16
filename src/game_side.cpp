@@ -1,8 +1,9 @@
 #include "game_side.h"
+#include "building.h"
+
 
 #include <godot_cpp/classes/input.hpp>
 #include <godot_cpp/classes/button.hpp>
-#include <godot_cpp/classes/resource_loader.hpp>
 #include <godot_cpp/classes/input_event_mouse_button.hpp>
 #include <godot_cpp/classes/input_event_mouse_motion.hpp>
 #include <godot_cpp/classes/input_event_key.hpp>
@@ -46,21 +47,16 @@ void GameSide::_bind_methods() {
     ADD_PROPERTY(PropertyInfo(Variant::INT, "side", PROPERTY_HINT_ENUM, "Player,Enemy"), "set_side", "get_side");
 }
 
-void GameSide::add_building(Building* building) {
-    buildings.append(building);
-}
-
 void GameSide::on_building_button_pressed(String p_building_type) {
-    Building* building;
-
+    // TODO -> maybe do sth with these buildings later
     if (p_building_type == "Base") {
-
+        Base* building = spawn_building<Base>("res://base.tscn");
     } else if (p_building_type == "CrystalsMine") {
-
-    } else if (p_building_type == "GassMine") {
-
+        CrystalsMine* building = spawn_building<CrystalsMine>("res://crystals_mine.tscn");
+    } else if (p_building_type == "GasMine") {
+        GasMine* building = spawn_building<GasMine>("res://gas_mine.tscn");
     } else if (p_building_type == "Barracks") {
-
+        Barracks* building = spawn_building<Barracks>("res://barracks.tscn");
     }
 
 }

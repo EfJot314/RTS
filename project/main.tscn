@@ -130,21 +130,6 @@ centered = false
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
 
-[node name="Base" type="Base" parent="." unique_id=1165611499]
-position = Vector2(319.00003, 275.00003)
-scale = Vector2(0.5361094, 0.51220316)
-texture = ExtResource("1_h2yge")
-
-[node name="CrystalsMine" type="CrystalsMine" parent="." unique_id=938199963]
-position = Vector2(799, 288)
-scale = Vector2(0.37200007, 0.37399995)
-texture = ExtResource("2_1bvp3")
-
-[node name="GasMine" type="GasMine" parent="." unique_id=606314273]
-position = Vector2(116, 492.00003)
-scale = Vector2(0.3209999, 0.35)
-texture = ExtResource("3_lquwl")
-
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
 position = Vector2(510, 374)
 disable_mode = 2

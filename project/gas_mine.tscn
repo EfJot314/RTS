@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cd0jo8abbpvrs"]
+
+[ext_resource type="Texture2D" uid="uid://dufa5y6tsokrd" path="res://GasMine_ai.png" id="1_yx6na"]
+
+[node name="GasMine" type="GasMine" unique_id=276355762]
+scale = Vector2(0.37200007, 0.37399995)
+texture = ExtResource("1_yx6na")

@@ -2,8 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://8te5hj5lfice" path="res://CrystalsMine_ai.png" id="1_0obt5"]
 
-[node name="Node2D" type="Node2D" unique_id=1887071835]
-
-[node name="CrystalsMine" type="CrystalsMine" parent="." unique_id=1534979143]
+[node name="CrystalsMine" type="CrystalsMine" unique_id=1534979143]
 scale = Vector2(0.37200007, 0.37399995)
 texture = ExtResource("1_0obt5")

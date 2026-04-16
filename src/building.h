@@ -11,6 +11,7 @@ class Building : public Sprite2D {
     GDCLASS(Building, Sprite2D)
 
 protected:
+    bool setting = true;
     int side = 0;
     double max_health = 500.0;
     double health = 500.0;
@@ -23,6 +24,7 @@ public:
     void set_health(const double p_health);
 
     void _ready() override;
+    void _input(const Ref<InputEvent> &event) override;
 
 };
 
