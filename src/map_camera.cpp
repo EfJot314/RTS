@@ -24,7 +24,7 @@ void MapCamera::_bind_methods() {
 
 void MapCamera::clamp_position() {
     Vector2 viewport_size = get_viewport_rect().size;
-    Vector2 view_size = viewport_size * get_zoom();
+    Vector2 view_size = viewport_size / get_zoom();
     Vector2 half_view = view_size / 2.0f;
 
     Vector2 pos = get_position();
@@ -36,6 +36,11 @@ void MapCamera::clamp_position() {
 }
 
 void MapCamera::_process(double delta) {
+    // zoom
+    Vector2 current_zoom = get_zoom();
+    Vector2 new_zoom = current_zoom.lerp(target_zoom, lerp_speed * delta);
+    set_zoom(new_zoom);
+
     // moving camera using arrows
     Input* input = Input::get_singleton();
     Vector2 velocity = Vector2(0, 0);
@@ -46,14 +51,10 @@ void MapCamera::_process(double delta) {
     if (input->is_action_pressed("ui_up"))    velocity.y -= 1;
 
     if (velocity.length() > 0) {
-        velocity = velocity.normalized() * speed;
+        velocity = velocity.normalized() * speed / new_zoom;
     }
 
     set_position(get_position() + velocity * (float)delta);
-
-    // zoom
-    Vector2 current_zoom = get_zoom();
-    set_zoom(current_zoom.lerp(target_zoom, lerp_speed * delta));
 
     clamp_position();
 }
@@ -65,7 +66,7 @@ void MapCamera::_unhandled_input(const Ref<InputEvent> &event) {
 
     if (mouse_motion.is_valid()) {
         if (input->is_mouse_button_pressed(MOUSE_BUTTON_RIGHT)) {
-            set_position(get_position() - mouse_motion->get_relative() * get_zoom());
+            set_position(get_position() - mouse_motion->get_relative() / get_zoom());
             clamp_position();
         }
     }
@@ -82,7 +83,6 @@ void MapCamera::_unhandled_input(const Ref<InputEvent> &event) {
                 target_zoom -= Vector2(zoom_speed, zoom_speed);
             }
 
-            // Ograniczamy zoom, żeby gracz nie przesadził
             target_zoom.x = CLAMP(target_zoom.x, min_zoom, max_zoom);
             target_zoom.y = CLAMP(target_zoom.y, min_zoom, max_zoom);
         }
