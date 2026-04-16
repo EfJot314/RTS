@@ -23,6 +23,11 @@ void Building::set_health(const double p_health) {
 
 void Building::_ready() {
     health = max_health;
+
+    // configure setting
+    setting = true;
+    Color green_transparent_tint = Color(0.4f, 1.0f, 0.4f, 0.3f);
+    set_modulate(green_transparent_tint);
 }
 
 void Building::_bind_methods() {
@@ -38,11 +43,19 @@ void Building::_bind_methods() {
 void Building::_input(const Ref<InputEvent> &event) {
     Ref<InputEventMouseButton> mouse_click = event;
     if (mouse_click.is_valid()) {
-        if (mouse_click->get_button_index() == MOUSE_BUTTON_RIGHT && setting) {
-            if (mouse_click->is_pressed()) {
-                setting = false;
+        if (setting) {
+            if (mouse_click->get_button_index() == MOUSE_BUTTON_LEFT) {
+                if (mouse_click->is_pressed()) {
+                    setting = false;
+                    set_modulate(Color("white"));
+                }
+            } else if (mouse_click->get_button_index() == MOUSE_BUTTON_RIGHT) {
+                if (mouse_click->is_pressed()) {
+                    this->queue_free();
+                }
             }
         }
+
     }
 
 
