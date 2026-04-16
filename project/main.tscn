@@ -111,6 +111,7 @@ scale = Vector2(0.2, 0.2)
 icon = ExtResource("2_5vw27")
 
 [node name="MapCamera" type="MapCamera" parent="." unique_id=2021836696]
+speed = 500.0
 position = Vector2(577, 327)
 limit_left = -500
 limit_top = -300
@@ -129,8 +130,10 @@ texture = ExtResource("1_7mycd")
 centered = false
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
+radius = 40.0
 
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
+speed = 100.0
 position = Vector2(510, 374)
 disable_mode = 2
 
@@ -160,6 +163,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion2" type="Minion" parent="." unique_id=570332551]
+speed = 100.0
 position = Vector2(582, 392)
 disable_mode = 2
 
@@ -189,6 +193,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion3" type="Minion" parent="." unique_id=7447742]
+speed = 100.0
 position = Vector2(523, 430)
 disable_mode = 2
 
@@ -218,6 +223,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion4" type="Minion" parent="." unique_id=1498165055]
+speed = 100.0
 position = Vector2(462, 403)
 disable_mode = 2
 
@@ -247,6 +253,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion5" type="Minion" parent="." unique_id=1603474356]
+speed = 100.0
 position = Vector2(565, 330)
 disable_mode = 2
 
@@ -276,6 +283,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion6" type="Minion" parent="." unique_id=930795752]
+speed = 100.0
 position = Vector2(463, 348)
 disable_mode = 2
 
@@ -305,6 +313,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion7" type="Minion" parent="." unique_id=766931443]
+speed = 100.0
 position = Vector2(412, 415)
 disable_mode = 2
 
@@ -334,6 +343,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion8" type="Minion" parent="." unique_id=1812235523]
+speed = 100.0
 position = Vector2(588, 432)
 disable_mode = 2
 
@@ -363,6 +373,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion9" type="Minion" parent="." unique_id=244755044]
+speed = 100.0
 position = Vector2(449, 458)
 disable_mode = 2
 
@@ -392,6 +403,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion10" type="Minion" parent="." unique_id=795048943]
+speed = 100.0
 position = Vector2(545, 486)
 disable_mode = 2
 
