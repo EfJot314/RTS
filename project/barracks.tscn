@@ -3,5 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bde00wigkwxgm" path="res://Barracks_ai.png" id="1_i6wji"]
 
 [node name="Barracks" type="Barracks" unique_id=1657644635]
+gas_cost = 20.0
+modulate = Color(0.4, 1, 0.4, 0.3)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_i6wji")

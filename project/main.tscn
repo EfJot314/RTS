@@ -9,6 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://dufa5y6tsokrd" path="res://GasMine_ai.png" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c7sxmye7px5vs" path="res://Robot_ai.png" id="4_lquwl"]
 
+[sub_resource type="FontFile" id="FontFile_5vw27"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
 radius = 41.303753
 
@@ -39,6 +60,19 @@ grow_vertical = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/GameSide/PanelContainer" unique_id=2102218427]
 layout_mode = 2
 
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer" unique_id=42414557]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="CrystalsLabel" type="Label" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/VBoxContainer" unique_id=496570194]
+layout_mode = 2
+text = "Crystals: 100.0"
+
+[node name="GasLabel" type="Label" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1622926193]
+layout_mode = 2
+text = "Gas: 100.0"
+
 [node name="BuildingButtons" type="HBoxContainer" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer" unique_id=1373565394]
 layout_mode = 2
 
@@ -52,12 +86,22 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 409.99997
-offset_bottom = 400.0
+offset_right = 408.0
+offset_bottom = 408.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("1_h2yge")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons/BaseButton/Button" unique_id=1428020500]
+layout_mode = 0
+offset_right = 499.99976
+offset_bottom = 495.0
+theme_override_fonts/font = SubResource("FontFile_5vw27")
+theme_override_font_sizes/font_size = 60
+text = "C: 40 G: 20"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="CrystalsMineButton" type="Control" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons" unique_id=616131203]
 clip_contents = true
@@ -69,12 +113,24 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 409.99997
-offset_bottom = 400.0
+offset_left = -0.99999994
+offset_top = -1.0000002
+offset_right = 408.99997
+offset_bottom = 407.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("2_1bvp3")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons/CrystalsMineButton/Button" unique_id=7565186]
+layout_mode = 0
+offset_right = 499.99976
+offset_bottom = 495.0
+theme_override_fonts/font = SubResource("FontFile_5vw27")
+theme_override_font_sizes/font_size = 60
+text = "C: 15 G: 0"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="GasMineButton" type="Control" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons" unique_id=1042269547]
 clip_contents = true
@@ -86,12 +142,24 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 409.99997
-offset_bottom = 400.0
+offset_left = -0.99999994
+offset_top = -1.0000002
+offset_right = 408.99997
+offset_bottom = 407.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("3_lquwl")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons/GasMineButton/Button" unique_id=2108626103]
+layout_mode = 0
+offset_right = 499.99976
+offset_bottom = 495.0
+theme_override_fonts/font = SubResource("FontFile_5vw27")
+theme_override_font_sizes/font_size = 60
+text = "C: 30 G: 0"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="BarracsButton" type="Control" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons" unique_id=1953334443]
 clip_contents = true
@@ -103,16 +171,27 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 409.99997
-offset_bottom = 400.0
+offset_left = -1.9999999
+offset_top = -1.0000002
+offset_right = 407.99997
+offset_bottom = 407.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("2_5vw27")
 
+[node name="Label" type="Label" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons/BarracsButton/Button" unique_id=276449260]
+layout_mode = 0
+offset_right = 499.99976
+offset_bottom = 495.0
+theme_override_fonts/font = SubResource("FontFile_5vw27")
+theme_override_font_sizes/font_size = 60
+text = "C: 20 G: 20"
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="MapCamera" type="MapCamera" parent="." unique_id=2021836696]
-speed = 500.0
-position = Vector2(577, 327)
+position = Vector2(585.7484, 327)
 limit_left = -500
 limit_top = -300
 limit_right = 4000
@@ -130,10 +209,8 @@ texture = ExtResource("1_7mycd")
 centered = false
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
-radius = 40.0
 
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
-speed = 100.0
 position = Vector2(510, 374)
 disable_mode = 2
 
@@ -163,7 +240,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion2" type="Minion" parent="." unique_id=570332551]
-speed = 100.0
 position = Vector2(582, 392)
 disable_mode = 2
 
@@ -193,7 +269,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion3" type="Minion" parent="." unique_id=7447742]
-speed = 100.0
 position = Vector2(523, 430)
 disable_mode = 2
 
@@ -223,7 +298,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion4" type="Minion" parent="." unique_id=1498165055]
-speed = 100.0
 position = Vector2(462, 403)
 disable_mode = 2
 
@@ -253,7 +327,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion5" type="Minion" parent="." unique_id=1603474356]
-speed = 100.0
 position = Vector2(565, 330)
 disable_mode = 2
 
@@ -283,7 +356,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion6" type="Minion" parent="." unique_id=930795752]
-speed = 100.0
 position = Vector2(463, 348)
 disable_mode = 2
 
@@ -313,7 +385,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion7" type="Minion" parent="." unique_id=766931443]
-speed = 100.0
 position = Vector2(412, 415)
 disable_mode = 2
 
@@ -343,7 +414,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion8" type="Minion" parent="." unique_id=1812235523]
-speed = 100.0
 position = Vector2(588, 432)
 disable_mode = 2
 
@@ -373,7 +443,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion9" type="Minion" parent="." unique_id=244755044]
-speed = 100.0
 position = Vector2(449, 458)
 disable_mode = 2
 
@@ -403,7 +472,6 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Minion10" type="Minion" parent="." unique_id=795048943]
-speed = 100.0
 position = Vector2(545, 486)
 disable_mode = 2
 

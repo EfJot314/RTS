@@ -3,5 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://brj3burx0faml" path="res://base_ai.png" id="1_rpg24"]
 
 [node name="Base" type="Base" unique_id=710815599]
+crystals_cost = 40.0
+gas_cost = 20.0
+modulate = Color(0.4, 1, 0.4, 0.3)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_rpg24")

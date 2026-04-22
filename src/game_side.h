@@ -6,6 +6,7 @@
 #include <godot_cpp/classes/packed_scene.hpp>
 #include <godot_cpp/classes/resource_loader.hpp>
 #include <godot_cpp/classes/scene_tree.hpp>
+#include <godot_cpp/classes/label.hpp>
 
 
 namespace godot {
@@ -15,6 +16,15 @@ class GameSide : public Control {
 
 private:
     int side = 0;
+    bool base_exists = false;
+    TypedArray<CrystalsMine> crystals_mines;
+    double crystals = 100;
+    TypedArray<GasMine> gas_mines;
+    double gas = 100;
+
+    // ui
+    Label* crystals_label = nullptr;
+    Label* gas_label = nullptr;
 
 protected:
     static void _bind_methods();
@@ -29,6 +39,10 @@ public:
 
     void _ready() override;
 
+    void _process(double delta) override;
+
+    void update_ui();
+
     template <typename T>
     T* spawn_building(String path) {
         Ref<PackedScene> building_scene = ResourceLoader::get_singleton()->load(path);
@@ -41,12 +55,20 @@ public:
 
         T* building = Object::cast_to<T>(scene_instance);
 
-        // Add created building to the current scene
-        if (building != nullptr) {
+        // Add created building to the current scene and decrease resources
+        if (building != nullptr
+            && building->get_crystals_cost() <= crystals
+            && building->get_gas_cost() <= gas) {
             Node *current_scene = get_tree()->get_current_scene();
             if (current_scene != nullptr) {
+                crystals -= building->get_crystals_cost();
+                gas -= building->get_gas_cost();
                 current_scene->add_child(building);
             }
+
+            // basic building setup
+            building->set_side(side);
+
         }
 
         return building;
