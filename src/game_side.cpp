@@ -61,24 +61,24 @@ void GameSide::_bind_methods() {
 }
 
 void GameSide::on_building_button_pressed(String p_building_type) {
-    if (p_building_type == "Base") {
+    if (base_exists) {
+        if (p_building_type == "CrystalsMine") {
+            CrystalsMine* building = spawn_building<CrystalsMine>("res://crystals_mine.tscn");
+            if (building != nullptr) {
+                crystals_mines.append(building);
+            }
+        } else if (p_building_type == "GasMine") {
+            GasMine* building = spawn_building<GasMine>("res://gas_mine.tscn");
+            if (building != nullptr) {
+                gas_mines.append(building);
+            }
+        } else if (p_building_type == "Barracks") {
+            Barracks* building = spawn_building<Barracks>("res://barracks.tscn");
+        }
+    } else if (p_building_type == "Base") {
         Base* building = spawn_building<Base>("res://base.tscn");
         if (building != nullptr)
             base_exists = true;
-    } else if (!base_exists) {
-        return;
-    } else if (p_building_type == "CrystalsMine") {
-        CrystalsMine* building = spawn_building<CrystalsMine>("res://crystals_mine.tscn");
-        if (building != nullptr) {
-            crystals_mines.append(building);
-        }
-    } else if (p_building_type == "GasMine") {
-        GasMine* building = spawn_building<GasMine>("res://gas_mine.tscn");
-        if (building != nullptr) {
-            gas_mines.append(building);
-        }
-    } else if (p_building_type == "Barracks") {
-        Barracks* building = spawn_building<Barracks>("res://barracks.tscn");
     }
 }
 

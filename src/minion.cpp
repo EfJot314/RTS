@@ -5,6 +5,7 @@
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/classes/input_event_mouse_button.hpp>
 
+
 using namespace godot;
 
 
@@ -42,6 +43,7 @@ int Minion::get_side() const {
 
 void Minion::set_destination(Vector2 target) {
     destination = target;
+    navigation->set_target_position(target);
 }
 
 void Minion::_bind_methods() {
@@ -71,6 +73,8 @@ void Minion::_ready() {
         health = max_health;
         update_health_bar();
     }
+    // get navigation agent
+    navigation = get_node<NavigationAgent2D>("NavigationAgent2D");
 }
 
 void Minion::update_health_bar() {
@@ -109,18 +113,31 @@ void Minion::highlight(bool highlight) {
 
 void Minion::move(double delta) {
     if (destination.has_value()) {
+        if (navigation->is_navigation_finished()) {
+            destination = std::nullopt;
+            return;
+        }
+
+        Vector2 next_path_pos = navigation->get_next_path_position();
+        Vector2 current_pos = get_global_position();
+
+        Vector2 velocity = (next_path_pos - current_pos).normalized() * speed;
+
         Vector2 position = get_global_position();
-        Vector2 destination_vector = destination.value() - position;
-        Vector2 direction = destination_vector.normalized();
-        Vector2 velocity = speed * direction;
         Vector2 position_delta = velocity * delta;
         Vector2 new_position = position + position_delta;
         set_position(new_position);
-
-        if (destination_vector.length() < position_delta.length()) {
-            destination = std::nullopt;
-        }
     }
+    // Jeśli dotarliśmy do celu, nie rób nic
+    if (navigation->is_navigation_finished()) {
+        return;
+    }
+
+    Vector2 next_path_pos = navigation->get_next_path_position();
+    Vector2 current_pos = get_global_position();
+
+    Vector2 velocity = (next_path_pos - current_pos).normalized() * speed;
+
 }
 
 void Minion::hit_all(double delta) {

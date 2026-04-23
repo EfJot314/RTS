@@ -30,6 +30,11 @@ cache/0/60/0/underline_position = 0.0
 cache/0/60/0/underline_thickness = 0.0
 cache/0/60/0/scale = 1.0
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_5vw27"]
+vertices = PackedVector2Array(2139.2578, 965.1875, 2384.0078, 984.39844, 2052.3516, 1072.9609, 1958.0391, 1285.5703, 1957.0234, 1158.1406, 1996.2578, 1102.5469, 2050, 1085.2969, 2085.8203, 1111.8281, 2193.0234, 1194.6406, 2056.1797, 1377.1016, 2850.75, 755.1328, 3020.3125, 838.8203, 3099.9219, 884.14844, 3134.1719, 938.7578, 2956.4688, 1048.1875, 2905.3594, 1034, 2530.9531, 920.1328, 2487.4922, 874.2031, 2841.2422, 1034, 1168.5703, 399.1172, 1064.7109, 324.70313, 1550, 320.03906, 1975.1563, 1897.9922, 1560.4766, 1908.3516, 1592.9297, 1877.1328, 1694.1328, 1854.0938, 2756.4688, 1084.6563, 2204.3594, 860.9375, 2228.3984, 831.64844, 1805.3203, 1738.4922, 2016.2266, 1521.9766, 2142.0625, 1569.9609, 2132.1719, 1906.9922, 2005.8828, 663.21094, 2011.7578, 652.21094, 2089.0313, 632.34375, 2106.3516, 629.3672, 2286.7031, 641.02344, 2268.9766, 672.53125, 2218.6875, 681.65625, 1194.1719, 1273.1016, 1152.4219, 1249.8984, 1242.5781, 1198.7422, 1287.7813, 1228.8672, 1628.2578, 799.84375, 1343, 925.64844, 1343, 907.1875, 1576.4297, 790.97656, 1498.8125, 636.96094, 1222.6484, 492.14844, 1616.5625, 409.8125, 1667.6484, 543.8672, 2724.4375, 1108.1406, 2488.5234, 979.0625, 3114.0234, 845.96094, 2388.25, 1504.7188, 2327.4688, 1447.7266, 2462.6172, 1366.2891, 2529.1328, 1396.9063, 1059.1563, 1232.1563, 1163.9922, 1295.0391, 1015.28906, 1446.7578, 53.320313, 1220.3516, 28.921875, 1158.9063, 17.421875, 833.9219, 681.71875, 947.4375, 447.4297, 1200.6328, 2684.3828, 1221.2266, 2675.4297, 1210.1719, 2681.6875, 1206.8828, 2795, 1201.5391, 2725.5938, 1261.3281, 1196.5078, 534.6094, 1529.6563, 675.77344, 1267.8125, 813.7031, 1141.7969, 851.8281, 1794.5781, 1071.8203, 1874.4922, 1060.0234, 1983.2031, 1090.6563, 1309.1563, 867.15625, 1237.9297, 909.34375, 2795, 1174.1172, 2756.9297, 1132.5078, 2797.75, 1102.8906, 2848.5781, 1083.9688, 2952.5313, 1084.0391, 2439.6484, 1692.9688, 2338.8594, 1615.7813, 2367.461, 1585.4219, 1995.6563, 332.1797, 2067.7266, 376.90625, 2018.4063, 447.10156, 1895.0078, 411.1328, 2703.3516, 1143.6719, 2679.2188, 1166.9297, 2641.2969, 1182.3438, 2312.2188, 1056.5078, 527, 798.7422, 836.9922, 246.99219, 981.28906, 274.92188, 972.1094, 322.65625, 783.90625, 742.64844, 611.71875, 842.59375, 1062.0234, 485.79688, 1139.9219, 551.22656, 1101.9766, 596.60156, 1024.5938, 626.3672, 1205.0469, 1662.3828, 1203.0781, 1899.2031, 835.9297, 1906.8125, 823.35156, 1793.6484, 850.4297, 1755.2188, 1068.7813, 1670.3672, 3079.2578, 312.03906, 3335.5625, 360.34375, 3461.7188, 467.2422, 3477.6016, 565.21094, 3426.4531, 576.1797, 2900.4922, 544.72656, 2844.6719, 538.90625, 1554.6172, 1124.4375, 1816.8672, 1233.0781, 1863.4609, 1305.4531, 1658.1328, 1454.0078, 1567.5469, 1427.1406, 1365.4531, 1232.1094, 2695.0078, 595.5078, 2720.6797, 603.78906, 2766.4688, 648.72656, 2739.3828, 681.85156, 2647.7031, 610.9375, 2134.5078, 431.6172, 2399.4766, 415.53125, 2404.4297, 448.03125, 2363.8281, 496.3672, 2101.0938, 502.0703, 2350.5, 551.90625, 2700.2422, 1167.6797, 2387.9375, 638.34375, 1214, 1329.2891, 2169.289, 742, 2225.3828, 695.75, 84.32031, 1667.4063, 29.671875, 1658.4531, 28.226563, 1620.9688, 476.28125, 1390.5469, 1002.28125, 1535.0313, 433.89844, 1860.5234, 590.6797, 1368.7109, 594.34375, 1357.4766, 2629.1563, 1212.6797, 2501.1797, 1274.6094, 1711.6328, 806.25, 1571.3984, 716.64844, 1687.4297, 652.0781, 1823.2031, 888.6172, 400.4922, 1295.5703, 825.0703, 869.78125, 988.1875, 919.7422, 2239.7734, 1571.9063, 2276.3906, 1608.5313, 2357.5313, 1823.6094, 2337.1719, 1905.0703, 1551.6563, 1683.1563, 1418.4297, 1818.3672, 1286.5469, 1799.1328, 1257.5938, 1639.8672, 1280.3594, 1627.5234, 1661.3516, 1496.1875, 1065.6016, 375.8203, 1136.4063, 425.1172, 1131.4297, 442.53906, 1028.9297, 373.78906, 2014.9375, 1483.2891, 1716.9688, 1676.8828, 1912.0938, 1324.9531, 2501.8828, 404.3828, 2501.1484, 371.60156, 2594.1875, 332.90625, 2554.1172, 437.03125, 2614.3203, 493.35156, 2776.4375, 508.3672, 2813.3203, 544.28125, 1129.2969, 1504.3594, 1270.4063, 1610.6406, 3011.961, 1080.8594, 3066.75, 1048.7266, 3298.2266, 1198.1094, 3084.7813, 1834.1172, 2486.8906, 611.5703, 2407.2266, 536.8281, 2416.0234, 504.5703, 2460.1172, 495.57813, 2488.1484, 662.8281, 2752.8438, 694.6406, 2904.5234, 557.0469, 3373.75, 671.6328, 3005.4219, 582.78125, 2091.9063, 850.2969, 2145.5625, 883.3203, 1889.5469, 1051.2813, 1214, 1455.7891, 1593.5, 971.46875, 1339.6328, 1117.6563, 1248.7734, 1072.7266, 1340.6563, 978.27344, 1642.9688, 832.1406, 284.70313, 769.3281, 226.3125, 787.1406, 27.65625, 669.10156, 16.273438, 475.34375, 223.50781, 296.45313, 334.25, 243.00781, 443.71875, 841.8828, 967.9297, 679.47656, 869.1875, 753.5781, 996.4531, 907.3594, 1129.8594, 855.35156, 2536.2422, 1722.4531, 2355.1719, 1550.6016, 2721.2188, 1273.4609, 2505.5234, 1290.6328, 2317.25, 1226.7734, 2369.8984, 654.3672, 2054.6719, 520.6875, 1943.2969, 557.25, 1801.1875, 381.2422, 1238.0703, 920.90625, 1067.8125, 1171.6328, 1572.8516, 1462.9922, 3435.9531, 1652.9063, 3445.6172, 1758.3672, 3384.5234, 1822.25, 3308.0781, 1846.7891, 3187.5, 1830.9766, 1698.8906, 835.6875, 1722.0938, 947.89844, 3351.2031, 1196.1016, 3429.5625, 1247.0938, 3454.0234, 1389.0938, 3451, 1515.3672, 3183.2813, 725, 3076.1484, 725, 2999.3281, 671.3125, 2995.3125, 640.78125, 3019.8984, 592.72656, 3250.7734, 685.2969, 3017.8984, 1900, 2911.0781, 1900, 2793.961, 1874.4063, 2740.3828, 1852.5781, 2867.3516, 1071.4531, 3466.5469, 1309.9688, 2667.2734, 1829.8516, 2614.4375, 1795.6094, 2564.1016, 1762.6875, 2538.2188, 1381.0391, 2133.3828, 731.3594, 2178.2734, 689.75, 2378.3906, 723.2031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 14, 15, 16, 17), PackedInt32Array(16, 15, 18), PackedInt32Array(19, 20, 21), PackedInt32Array(22, 23, 24, 25), PackedInt32Array(16, 18, 26), PackedInt32Array(17, 27, 28), PackedInt32Array(22, 25, 29, 30, 31, 32), PackedInt32Array(33, 34, 35, 36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43), PackedInt32Array(44, 45, 46, 47), PackedInt32Array(48, 49, 19, 21, 50, 51), PackedInt32Array(16, 26, 52, 53), PackedInt32Array(11, 54, 12), PackedInt32Array(55, 56, 57, 58), PackedInt32Array(59, 60, 61), PackedInt32Array(62, 63, 64, 65, 66), PackedInt32Array(67, 68, 69, 70, 71), PackedInt32Array(72, 49, 48, 73, 74, 75), PackedInt32Array(76, 77, 2, 6, 78), PackedInt32Array(74, 79, 80, 75), PackedInt32Array(81, 82, 83, 84, 85), PackedInt32Array(86, 87, 88), PackedInt32Array(89, 90, 91, 92), PackedInt32Array(53, 52, 93, 94, 95, 96), PackedInt32Array(97, 98, 99, 100, 101, 102), PackedInt32Array(103, 104, 105, 106), PackedInt32Array(107, 108, 109, 110, 111, 112), PackedInt32Array(113, 114, 115, 116, 117, 118, 119), PackedInt32Array(120, 121, 122, 123, 124, 125), PackedInt32Array(126, 127, 128, 129, 130), PackedInt32Array(131, 132, 133, 134), PackedInt32Array(135, 131, 134, 136, 36), PackedInt32Array(93, 137, 94), PackedInt32Array(36, 136, 138, 37), PackedInt32Array(139, 40, 43), PackedInt32Array(28, 140, 141, 17), PackedInt32Array(142, 143, 144, 145), PackedInt32Array(146, 147, 142, 145, 148), PackedInt32Array(146, 148, 149), PackedInt32Array(96, 95, 150, 151, 7), PackedInt32Array(152, 44, 47, 153, 154, 33), PackedInt32Array(155, 152, 33), PackedInt32Array(66, 156, 62), PackedInt32Array(146, 149, 66, 65, 157, 158, 61), PackedInt32Array(159, 160, 161, 162, 32, 31), PackedInt32Array(163, 164, 165, 166, 167, 168), PackedInt32Array(169, 170, 171, 103, 172), PackedInt32Array(173, 30, 29, 174, 168, 175), PackedInt32Array(176, 177, 178, 179), PackedInt32Array(180, 179, 178, 113, 181), PackedInt32Array(182, 181, 113, 119), PackedInt32Array(183, 184, 167, 166, 107, 112, 146, 61), PackedInt32Array(185, 186, 187, 188), PackedInt32Array(189, 190, 191, 192, 130), PackedInt32Array(193, 189, 130, 129, 194), PackedInt32Array(195, 118, 117, 196, 197), PackedInt32Array(198, 199, 0, 2), PackedInt32Array(2, 200, 155, 33, 198), PackedInt32Array(6, 5, 78), PackedInt32Array(76, 78, 121, 120), PackedInt32Array(139, 43, 125, 124, 184, 201), PackedInt32Array(183, 201, 184), PackedInt32Array(202, 203, 204, 205, 206), PackedInt32Array(207, 208, 209, 210, 211, 212, 98), PackedInt32Array(213, 207, 98, 97), PackedInt32Array(101, 100, 172, 103, 106, 214, 215), PackedInt32Array(216, 215, 214, 217), PackedInt32Array(218, 86, 88, 219, 55, 58, 220), PackedInt32Array(7, 151, 221, 222), PackedInt32Array(138, 223, 37), PackedInt32Array(91, 224, 35, 34, 225, 92), PackedInt32Array(226, 92, 225, 51, 50), PackedInt32Array(158, 216, 217, 75, 80, 227, 228), PackedInt32Array(167, 229, 168), PackedInt32Array(230, 231, 232, 233, 234), PackedInt32Array(206, 235, 77, 236), PackedInt32Array(237, 238, 239, 240, 230, 234, 188, 187), PackedInt32Array(241, 242, 243, 244, 245, 246), PackedInt32Array(188, 247, 248, 249, 250, 220, 71, 70, 85, 185), PackedInt32Array(84, 251, 85), PackedInt32Array(70, 81, 85), PackedInt32Array(238, 252, 239), PackedInt32Array(220, 250, 253, 254, 255, 218), PackedInt32Array(220, 58, 256), PackedInt32Array(221, 220, 256), PackedInt32Array(221, 256, 222), PackedInt32Array(7, 222, 8), PackedInt32Array(175, 3, 9, 173), PackedInt32Array(168, 174, 163), PackedInt32Array(59, 61, 158, 228), PackedInt32Array(204, 228, 227, 205), PackedInt32Array(236, 202, 206), PackedInt32Array(76, 236, 77), PackedInt32Array(2, 77, 200), PackedInt32Array(257, 198, 33), PackedInt32Array(258, 257, 33), PackedInt32Array(259, 193, 194, 17), PackedInt32Array(259, 17, 141, 39, 38), PackedInt32Array(197, 10, 17, 194), PackedInt32Array(196, 246, 245, 197), PackedInt32Array(194, 195, 197), PackedInt32Array(258, 33, 39)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(6, 471, 218, 288, 332, 233, 838, 237, 993, 267, 983, 319, 1033, 364, 1069, 366, 1148, 421, 1140, 449, 1079, 487, 1154, 550, 1108, 605, 1030, 635, 982, 680, 1133, 844, 1187, 531, 1211, 492, 1161, 406, 1034, 315, 1555, 310, 1621, 399, 1802, 371, 1893, 400, 1995, 320, 2082, 374, 2030, 448, 2064, 517, 2096, 621, 2091, 500, 2128, 422, 2408, 405, 2415, 451, 2373, 501, 2361, 551, 2400, 641, 2373, 665, 2292, 652, 2283, 668, 2378, 712, 2478, 657, 2477, 616, 2396, 540, 2408, 496, 2462, 485, 2649, 600, 2695, 585, 2726, 595, 2780, 648, 2753, 681, 2893, 554, 2845, 549, 2810, 555, 2772, 518, 2610, 503, 2548, 445, 2492, 410, 2491, 365, 2592, 323, 3080, 302, 3340, 351, 3471, 462, 3489, 573, 3433, 585, 3380, 681, 3254, 695, 3186, 735, 3073, 735, 2990, 677, 2985, 639, 3007, 596, 2867, 752, 3023, 829, 3128, 837, 3111, 883, 3148, 942, 2958, 1059, 2904, 1044, 2844, 1044, 2762, 1093, 2732, 1115, 2713, 1147, 2709, 1178, 2681, 1177, 2649, 1190, 2637, 1220, 2513, 1280, 2714, 1264, 2677, 1228, 2660, 1207, 2679, 1197, 2785, 1192, 2785, 1178, 2742, 1131, 2793, 1094, 2844, 1075, 2865, 1061, 2953, 1074, 3009, 1071, 3067, 1037, 3301, 1188, 3354, 1186, 3437, 1240, 3477, 1308, 3464, 1390, 3461, 1516, 3446, 1653, 3456, 1762, 3390, 1831, 3309, 1857, 3187, 1841, 3089, 1844, 3022, 1910, 2910, 1910, 2791, 1884, 2737, 1862, 2663, 1839, 2609, 1804, 2557, 1770, 2530, 1731, 2435, 1702, 2324, 1617, 2356, 1583, 2344, 1549, 2375, 1506, 2311, 1446, 2462, 1355, 2525, 1384, 2313, 1236, 2197, 1206, 2065, 1382, 2025, 1485, 2026, 1515, 2144, 1560, 2244, 1562, 2285, 1603, 2368, 1823, 2345, 1915, 2132, 1917, 1975, 1908, 1535, 1919, 1588, 1868, 1689, 1845, 1790, 1740, 1714, 1687, 1556, 1693, 1422, 1829, 1278, 1808, 1250, 1654, 1215, 1669, 1213, 1909, 827, 1917, 813, 1791, 844, 1747, 1055, 1665, 998, 1549, 434, 1872, 81, 1677, 20, 1667, 18, 1615, 473, 1381, 583, 1360, 450, 1218, 406, 1307, 46, 1229, 19, 1161, 7, 822, 680, 937, 824, 859, 984, 908, 864, 763, 786, 753, 612, 854, 527, 810, 444, 853, 284, 780, 225, 798, 18, 675), PackedVector2Array(1129, 1493, 1204, 1450, 1204, 1331, 1186, 1280, 1132, 1250, 1243, 1187, 1291, 1219, 1363, 1222, 1551, 1115, 1779, 1065, 1717, 959, 1597, 981, 1340, 1129, 1249, 1084, 1077, 1178, 1070, 1227, 1180, 1293, 1032, 1444), PackedVector2Array(2000, 653, 1938, 567, 1670, 554, 1514, 640, 1545, 679, 1283, 817, 1324, 870, 1248, 915, 1341, 967, 1641, 822, 1704, 826, 1877, 1047, 1815, 895, 1708, 816, 1630, 810, 1333, 941, 1333, 901, 1566, 785, 1561, 711, 1685, 642), PackedVector2Array(1284, 1614, 1572, 1452, 1660, 1485, 1906, 1317, 1948, 1281, 1947, 1155, 1983, 1104, 1830, 1235, 1877, 1308, 1660, 1465, 1569, 1438), PackedVector2Array(2061, 1081, 2088, 1101, 2309, 1047, 2482, 971, 2518, 921, 2483, 884, 2184, 870, 2216, 831, 2156, 740, 2213, 693, 2183, 699, 2142, 737, 2104, 846, 2156, 878, 2150, 956, 2443, 979)])
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
 radius = 41.303753
 
@@ -41,11 +46,9 @@ radius = 41.303753
 z_index = 4096
 z_as_relative = false
 anchors_preset = -1
-anchor_left = -0.16000001
-anchor_right = -0.16000001
-offset_left = 183.32
+offset_left = -1.0
 offset_top = 547.0
-offset_right = 1339.3201
+offset_right = 1155.0
 offset_bottom = 647.0
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/GameSide" unique_id=1401304104]
@@ -191,19 +194,24 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="MapCamera" type="MapCamera" parent="." unique_id=2021836696]
-position = Vector2(585.7484, 327)
-limit_left = -500
-limit_top = -300
-limit_right = 4000
-limit_bottom = 2200
+speed = 500.0
+position = Vector2(578, 327)
+limit_left = -404
+limit_top = -350
+limit_right = 4096
+limit_bottom = 2150
 
 [node name="Background" type="Sprite2D" parent="MapCamera" unique_id=1433787981]
 z_index = -100
 position = Vector2(19, 3)
 texture = ExtResource("1_272bh")
 
-[node name="Terrain" type="Sprite2D" parent="." unique_id=588008698]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1749669072]
+navigation_polygon = SubResource("NavigationPolygon_5vw27")
+
+[node name="Terrain" type="Sprite2D" parent="NavigationRegion2D" unique_id=588008698]
 z_index = -20
+position = Vector2(-3, -1)
 scale = Vector2(1.2386364, 1.2532552)
 texture = ExtResource("1_7mycd")
 centered = false
@@ -211,6 +219,7 @@ centered = false
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
 
 [node name="Minion" type="Minion" parent="." unique_id=2037430734]
+speed = 100.0
 position = Vector2(510, 374)
 disable_mode = 2
 
@@ -239,11 +248,14 @@ texture = ExtResource("2_0xm2m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Minion" unique_id=1517605881]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion2" type="Minion" parent="." unique_id=570332551]
-position = Vector2(582, 392)
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion" unique_id=647383038]
+
+[node name="Minion2" type="Minion" parent="." unique_id=1298129362]
+speed = 100.0
+position = Vector2(458, 405)
 disable_mode = 2
 
-[node name="Health" type="ProgressBar" parent="Minion2" unique_id=1281135074]
+[node name="Health" type="ProgressBar" parent="Minion2" unique_id=1887650060]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
 offset_left = 27.0
@@ -254,25 +266,28 @@ value = 100.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Minion2" unique_id=518406873]
+[node name="Sprite2D" type="Sprite2D" parent="Minion2" unique_id=1646976310]
 scale = Vector2(0.13455479, 0.12889062)
 texture = ExtResource("4_lquwl")
 
-[node name="Selection" type="Sprite2D" parent="Minion2" unique_id=1159356722]
+[node name="Selection" type="Sprite2D" parent="Minion2" unique_id=962608070]
 visible = false
 z_index = -1
 position = Vector2(2.9999924, 14.000001)
 scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion2" unique_id=1616337248]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion2" unique_id=2146010824]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion3" type="Minion" parent="." unique_id=7447742]
-position = Vector2(523, 430)
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion2" unique_id=124732794]
+
+[node name="Minion3" type="Minion" parent="." unique_id=1057076764]
+speed = 100.0
+position = Vector2(525, 425)
 disable_mode = 2
 
-[node name="Health" type="ProgressBar" parent="Minion3" unique_id=1509173797]
+[node name="Health" type="ProgressBar" parent="Minion3" unique_id=401560933]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
 offset_left = 27.0
@@ -283,25 +298,28 @@ value = 100.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Minion3" unique_id=1765067446]
+[node name="Sprite2D" type="Sprite2D" parent="Minion3" unique_id=435490703]
 scale = Vector2(0.13455479, 0.12889062)
 texture = ExtResource("4_lquwl")
 
-[node name="Selection" type="Sprite2D" parent="Minion3" unique_id=1627320892]
+[node name="Selection" type="Sprite2D" parent="Minion3" unique_id=988705077]
 visible = false
 z_index = -1
 position = Vector2(2.9999924, 14.000001)
 scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion3" unique_id=543285869]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion3" unique_id=1905233799]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion4" type="Minion" parent="." unique_id=1498165055]
-position = Vector2(462, 403)
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion3" unique_id=1504369049]
+
+[node name="Minion4" type="Minion" parent="." unique_id=183364617]
+speed = 100.0
+position = Vector2(565, 386)
 disable_mode = 2
 
-[node name="Health" type="ProgressBar" parent="Minion4" unique_id=2003911079]
+[node name="Health" type="ProgressBar" parent="Minion4" unique_id=354211984]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
 offset_left = 27.0
@@ -312,25 +330,28 @@ value = 100.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Minion4" unique_id=2090788430]
+[node name="Sprite2D" type="Sprite2D" parent="Minion4" unique_id=827547426]
 scale = Vector2(0.13455479, 0.12889062)
 texture = ExtResource("4_lquwl")
 
-[node name="Selection" type="Sprite2D" parent="Minion4" unique_id=1388459363]
+[node name="Selection" type="Sprite2D" parent="Minion4" unique_id=732650056]
 visible = false
 z_index = -1
 position = Vector2(2.9999924, 14.000001)
 scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion4" unique_id=1583013016]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion4" unique_id=1939867653]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion5" type="Minion" parent="." unique_id=1603474356]
-position = Vector2(565, 330)
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion4" unique_id=1854244781]
+
+[node name="Minion5" type="Minion" parent="." unique_id=487762003]
+speed = 100.0
+position = Vector2(536, 339)
 disable_mode = 2
 
-[node name="Health" type="ProgressBar" parent="Minion5" unique_id=95126186]
+[node name="Health" type="ProgressBar" parent="Minion5" unique_id=1322726977]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
 offset_left = 27.0
@@ -341,25 +362,28 @@ value = 100.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Minion5" unique_id=700923836]
+[node name="Sprite2D" type="Sprite2D" parent="Minion5" unique_id=32069858]
 scale = Vector2(0.13455479, 0.12889062)
 texture = ExtResource("4_lquwl")
 
-[node name="Selection" type="Sprite2D" parent="Minion5" unique_id=107159201]
+[node name="Selection" type="Sprite2D" parent="Minion5" unique_id=1423421346]
 visible = false
 z_index = -1
 position = Vector2(2.9999924, 14.000001)
 scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion5" unique_id=1800256852]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion5" unique_id=1977451296]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion6" type="Minion" parent="." unique_id=930795752]
-position = Vector2(463, 348)
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion5" unique_id=1755735367]
+
+[node name="Minion6" type="Minion" parent="." unique_id=1992850249]
+speed = 100.0
+position = Vector2(472, 341)
 disable_mode = 2
 
-[node name="Health" type="ProgressBar" parent="Minion6" unique_id=932403894]
+[node name="Health" type="ProgressBar" parent="Minion6" unique_id=457714032]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
 offset_left = 27.0
@@ -370,25 +394,28 @@ value = 100.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Minion6" unique_id=1937806182]
+[node name="Sprite2D" type="Sprite2D" parent="Minion6" unique_id=947944329]
 scale = Vector2(0.13455479, 0.12889062)
 texture = ExtResource("4_lquwl")
 
-[node name="Selection" type="Sprite2D" parent="Minion6" unique_id=846421087]
+[node name="Selection" type="Sprite2D" parent="Minion6" unique_id=1562684645]
 visible = false
 z_index = -1
 position = Vector2(2.9999924, 14.000001)
 scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion6" unique_id=1980086646]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion6" unique_id=2127055920]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion7" type="Minion" parent="." unique_id=766931443]
-position = Vector2(412, 415)
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion6" unique_id=794425619]
+
+[node name="Minion7" type="Minion" parent="." unique_id=958446346]
+speed = 100.0
+position = Vector2(435, 372)
 disable_mode = 2
 
-[node name="Health" type="ProgressBar" parent="Minion7" unique_id=1171425166]
+[node name="Health" type="ProgressBar" parent="Minion7" unique_id=589668250]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
 offset_left = 27.0
@@ -399,25 +426,28 @@ value = 100.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Minion7" unique_id=247683498]
+[node name="Sprite2D" type="Sprite2D" parent="Minion7" unique_id=434123765]
 scale = Vector2(0.13455479, 0.12889062)
 texture = ExtResource("4_lquwl")
 
-[node name="Selection" type="Sprite2D" parent="Minion7" unique_id=1546383959]
+[node name="Selection" type="Sprite2D" parent="Minion7" unique_id=397606054]
 visible = false
 z_index = -1
 position = Vector2(2.9999924, 14.000001)
 scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion7" unique_id=1099020668]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion7" unique_id=1469432139]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion8" type="Minion" parent="." unique_id=1812235523]
-position = Vector2(588, 432)
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion7" unique_id=665270217]
+
+[node name="Minion8" type="Minion" parent="." unique_id=1918517396]
+speed = 100.0
+position = Vector2(484, 452)
 disable_mode = 2
 
-[node name="Health" type="ProgressBar" parent="Minion8" unique_id=1356381691]
+[node name="Health" type="ProgressBar" parent="Minion8" unique_id=908485543]
 modulate = Color(0, 1, 0, 1)
 z_index = 1
 offset_left = 27.0
@@ -428,74 +458,18 @@ value = 100.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Minion8" unique_id=1839015131]
+[node name="Sprite2D" type="Sprite2D" parent="Minion8" unique_id=2127959396]
 scale = Vector2(0.13455479, 0.12889062)
 texture = ExtResource("4_lquwl")
 
-[node name="Selection" type="Sprite2D" parent="Minion8" unique_id=1440834610]
+[node name="Selection" type="Sprite2D" parent="Minion8" unique_id=1942016010]
 visible = false
 z_index = -1
 position = Vector2(2.9999924, 14.000001)
 scale = Vector2(0.055234317, 0.022187503)
 texture = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion8" unique_id=1070302840]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion8" unique_id=1837655771]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Minion9" type="Minion" parent="." unique_id=244755044]
-position = Vector2(449, 458)
-disable_mode = 2
-
-[node name="Health" type="ProgressBar" parent="Minion9" unique_id=1811230197]
-modulate = Color(0, 1, 0, 1)
-z_index = 1
-offset_left = 27.0
-offset_top = -21.0
-offset_right = 31.0
-offset_bottom = 10.0
-value = 100.0
-fill_mode = 3
-show_percentage = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Minion9" unique_id=1883841795]
-scale = Vector2(0.13455479, 0.12889062)
-texture = ExtResource("4_lquwl")
-
-[node name="Selection" type="Sprite2D" parent="Minion9" unique_id=438607855]
-visible = false
-z_index = -1
-position = Vector2(2.9999924, 14.000001)
-scale = Vector2(0.055234317, 0.022187503)
-texture = ExtResource("2_0xm2m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion9" unique_id=883119083]
-shape = SubResource("CircleShape2D_0xm2m")
-
-[node name="Minion10" type="Minion" parent="." unique_id=795048943]
-position = Vector2(545, 486)
-disable_mode = 2
-
-[node name="Health" type="ProgressBar" parent="Minion10" unique_id=1291462275]
-modulate = Color(0, 1, 0, 1)
-z_index = 1
-offset_left = 27.0
-offset_top = -21.0
-offset_right = 31.0
-offset_bottom = 10.0
-value = 100.0
-fill_mode = 3
-show_percentage = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Minion10" unique_id=654631862]
-scale = Vector2(0.13455479, 0.12889062)
-texture = ExtResource("4_lquwl")
-
-[node name="Selection" type="Sprite2D" parent="Minion10" unique_id=1305118538]
-visible = false
-z_index = -1
-position = Vector2(2.9999924, 14.000001)
-scale = Vector2(0.055234317, 0.022187503)
-texture = ExtResource("2_0xm2m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion10" unique_id=1338534042]
-shape = SubResource("CircleShape2D_0xm2m")
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion8" unique_id=204130863]

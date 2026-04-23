@@ -8,6 +8,7 @@
 #include <godot_cpp/classes/area2d.hpp>
 #include <godot_cpp/classes/input_event.hpp>
 #include <godot_cpp/classes/progress_bar.hpp>
+#include <godot_cpp/classes/navigation_agent2d.hpp>
 
 namespace godot {
 
@@ -20,10 +21,11 @@ private:
     double damage_per_second = 10;
     double max_health = 100;
     double health = 100.0;
-	double speed = 100.0;
-    std::optional<Vector2> destination;
     Sprite2D* selection_circle = nullptr;
     ProgressBar* health_bar = nullptr;
+    NavigationAgent2D* navigation;
+	double speed = 100.0;
+    std::optional<Vector2> destination;     //obosolete, but may be useful in the future
 
 protected:
 	void move(double delta);
