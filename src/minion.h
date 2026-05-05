@@ -17,6 +17,8 @@ class Minion : public Area2D {
 
 private:
     int side = 0;
+    double crystals_cost = 10;
+    double gas_cost = 5;
     bool selected = false;
     double damage_per_second = 10;
     double max_health = 100;
@@ -56,6 +58,11 @@ public:
 	void _input(const Ref<InputEvent> &event) override;
 	void _ready() override;
 	void _process(double delta) override;
+
+    double get_crystals_cost() const;
+    void set_crystals_cost(const double p_crystals_cost);
+    double get_gas_cost() const;
+    void set_gas_cost(const double p_gas_cost);
 };
 
 }

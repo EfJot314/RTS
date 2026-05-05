@@ -4,6 +4,7 @@
 
 #include <godot_cpp/classes/input.hpp>
 #include <godot_cpp/classes/button.hpp>
+#include <godot_cpp/classes/viewport.hpp>
 #include <godot_cpp/classes/input_event_mouse_button.hpp>
 #include <godot_cpp/classes/input_event_mouse_motion.hpp>
 #include <godot_cpp/classes/input_event_key.hpp>
@@ -28,6 +29,7 @@ void GameSide::_ready() {
     Button* btn_crystal = get_node<Button>("PanelContainer/HBoxContainer/BuildingButtons/CrystalsMineButton/Button");
     Button* btn_gas = get_node<Button>("PanelContainer/HBoxContainer/BuildingButtons/GasMineButton/Button");
     Button* btn_barracks = get_node<Button>("PanelContainer/HBoxContainer/BuildingButtons/BarracsButton/Button");
+    Button* btn_minion = get_node<Button>("PanelContainer/HBoxContainer/BuildingButtons/MinionButton/Button");
 
     if (btn_base) {
         btn_base->connect("pressed", Callable(this, "on_building_button_pressed").bind("Base"));
@@ -40,6 +42,10 @@ void GameSide::_ready() {
     }
     if (btn_barracks) {
         btn_barracks->connect("pressed", Callable(this, "on_building_button_pressed").bind("Barracks"));
+    }
+    //minion
+    if (btn_minion) {
+        btn_minion->connect("pressed", Callable(this, "on_minion_button_pressed").bind("Minion1"));
     }
 }
 
@@ -56,6 +62,7 @@ void GameSide::_bind_methods() {
     ClassDB::bind_method(D_METHOD("set_side", "p_side"), &GameSide::set_side);
 
     ClassDB::bind_method(D_METHOD("on_building_button_pressed", "p_building_type"), &GameSide::on_building_button_pressed);
+    ClassDB::bind_method(D_METHOD("on_minion_button_pressed", "p_minion_type"), &GameSide::on_minion_button_pressed);
 
     ADD_PROPERTY(PropertyInfo(Variant::INT, "side", PROPERTY_HINT_ENUM, "Player,Enemy"), "set_side", "get_side");
 }
@@ -74,12 +81,61 @@ void GameSide::on_building_button_pressed(String p_building_type) {
             }
         } else if (p_building_type == "Barracks") {
             Barracks* building = spawn_building<Barracks>("res://barracks.tscn");
+            barracks.append(building);
         }
     } else if (p_building_type == "Base") {
         Base* building = spawn_building<Base>("res://base.tscn");
         if (building != nullptr)
             base_exists = true;
     }
+}
+
+Minion* GameSide::spawn_minion(String path) {
+    Ref<PackedScene> building_scene = ResourceLoader::get_singleton()->load(path);
+
+    if (building_scene.is_null()) {
+        return nullptr;
+    }
+
+    Node* scene_instance = building_scene->instantiate();
+
+    Minion* minion = Object::cast_to<Minion>(scene_instance);
+    if (minion != nullptr
+        && minion->get_crystals_cost() <= crystals
+        && minion->get_gas_cost() <= gas) {
+        Node *current_scene = get_tree()->get_current_scene();
+        if (current_scene != nullptr) {
+            crystals -= minion->get_crystals_cost();
+            gas -= minion->get_gas_cost();
+            current_scene->add_child(minion);\
+            minion->set_side(side);
+        }
+    }
+    return minion;
+}
+
+void GameSide::on_minion_button_pressed(String p_minion_type) {
+    if (p_minion_type == "Minion1") {
+        if (flag_position) {
+            Minion* minion = spawn_minion("res://minion.tscn");
+            minion->set_global_position(flag_position.value());
+        }
+    }
+}
+
+bool GameSide::flag_position_ok(Vector2 position) {
+    double max_r = 200.0;
+    for(int i = 0 ; i < barracks.size() ; i++) {
+        Variant v =  barracks[i];
+        Barracks* m = Object::cast_to<Barracks>(v);
+        Vector2 barracks_position = m->get_global_position();
+        double distance = barracks_position.distance_to(position);
+
+        UtilityFunctions::print("Dist: ", distance, barracks_position, position);
+        if (distance <= max_r)
+            return true;
+    }
+    return false;
 }
 
 void GameSide::_input(const Ref<InputEvent> &event) {
@@ -96,6 +152,27 @@ void GameSide::_input(const Ref<InputEvent> &event) {
                 on_building_button_pressed("GasMine");
             } else if (key_event->get_keycode() == Key::KEY_4) {
                 on_building_button_pressed("Barracks");
+            }
+        }
+
+        // Add minion target
+        if (key_event->get_keycode() == Key::KEY_T) {
+            setting_flag = true;
+        }
+    }
+
+    if (setting_flag) {
+        // setting flag
+        Ref<InputEventMouseButton> mouse_event = event;
+        if (mouse_event.is_valid()) {
+            if (mouse_event->is_pressed() && mouse_event->get_button_index() == MOUSE_BUTTON_LEFT) {
+                Vector2 screen_pos = mouse_event->get_position();
+                Vector2 new_target = get_viewport()->get_canvas_transform().affine_inverse().xform(screen_pos);
+                if (flag_position_ok(new_target)) {
+                    UtilityFunctions::print("Target set");
+                    flag_position = new_target;
+                    setting_flag = false;
+                }
             }
         }
     }

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bxk3yqaelt6mh"]
+
+[ext_resource type="Texture2D" uid="uid://c7sxmye7px5vs" path="res://Robot_ai.png" id="1_20mgi"]
+[ext_resource type="Texture2D" uid="uid://csx7iwc0kun6g" path="res://select-circle.svg" id="2_777tc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
+radius = 41.303753
+
+[node name="Minion" type="Minion" unique_id=810708891]
+speed = 100.0
+disable_mode = 2
+
+[node name="Health" type="ProgressBar" parent="." unique_id=2076679895]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+offset_left = 27.0
+offset_top = -21.0
+offset_right = 31.0
+offset_bottom = 10.0
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=718921753]
+scale = Vector2(0.13455479, 0.12889062)
+texture = ExtResource("1_20mgi")
+
+[node name="Selection" type="Sprite2D" parent="." unique_id=2043289110]
+visible = false
+z_index = -1
+position = Vector2(2.9999924, 14.000001)
+scale = Vector2(0.055234317, 0.022187503)
+texture = ExtResource("2_777tc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=922349488]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1192707113]

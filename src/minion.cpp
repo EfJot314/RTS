@@ -56,9 +56,16 @@ void Minion::_bind_methods() {
     ClassDB::bind_method(D_METHOD("get_health"), &Minion::get_health);
     ClassDB::bind_method(D_METHOD("set_health", "p_health"), &Minion::set_health);
 
+    ClassDB::bind_method(D_METHOD("get_crystals_cost"), &Minion::get_crystals_cost);
+    ClassDB::bind_method(D_METHOD("set_crystals_cost", "p_crystals_cost"), &Minion::set_crystals_cost);
+    ClassDB::bind_method(D_METHOD("get_gas_cost"), &Minion::get_gas_cost);
+    ClassDB::bind_method(D_METHOD("set_gas_cost", "p_gas_cost"), &Minion::set_gas_cost);
+
     ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "speed"), "set_speed", "get_speed");
     ADD_PROPERTY(PropertyInfo(Variant::INT, "side", PROPERTY_HINT_ENUM, "Player,Enemy"), "set_side", "get_side");
     ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "max_health"), "set_health", "get_health");
+    ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "crystals_cost"), "set_crystals_cost", "get_crystals_cost");
+    ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "gas_cost"), "set_gas_cost", "get_gas_cost");
 }
 
 
@@ -157,4 +164,20 @@ void Minion::hit_all(double delta) {
 void Minion::_process(double delta) {
     move(delta);
     hit_all(delta);
+}
+
+double Minion::get_crystals_cost() const {
+    return crystals_cost;
+}
+
+void Minion::set_crystals_cost(const double p_crystals_cost) {
+    crystals_cost = p_crystals_cost;
+}
+
+double Minion::get_gas_cost() const {
+    return gas_cost;
+}
+
+void Minion::set_gas_cost(const double p_gas_cost) {
+    gas_cost = p_gas_cost;
 }

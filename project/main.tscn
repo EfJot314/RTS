@@ -193,6 +193,33 @@ text = "C: 20 G: 20"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="MinionButton" type="Control" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons" unique_id=356542477]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons/MinionButton" unique_id=1063589238]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 408.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("4_lquwl")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameSide/PanelContainer/HBoxContainer/BuildingButtons/MinionButton/Button" unique_id=201904365]
+layout_mode = 0
+offset_right = 499.99976
+offset_bottom = 495.0
+theme_override_fonts/font = SubResource("FontFile_5vw27")
+theme_override_font_sizes/font_size = 60
+text = "C: 10 G: 5"
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="MapCamera" type="MapCamera" parent="." unique_id=2021836696]
 speed = 500.0
 position = Vector2(578, 327)
@@ -217,38 +244,6 @@ texture = ExtResource("1_7mycd")
 centered = false
 
 [node name="SelectionManager" type="SelectionManager" parent="." unique_id=272526661]
-
-[node name="Minion" type="Minion" parent="." unique_id=2037430734]
-speed = 100.0
-position = Vector2(510, 374)
-disable_mode = 2
-
-[node name="Health" type="ProgressBar" parent="Minion" unique_id=1195079942]
-modulate = Color(0, 1, 0, 1)
-z_index = 1
-offset_left = 27.0
-offset_top = -21.0
-offset_right = 31.0
-offset_bottom = 10.0
-value = 100.0
-fill_mode = 3
-show_percentage = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Minion" unique_id=73679874]
-scale = Vector2(0.13455479, 0.12889062)
-texture = ExtResource("4_lquwl")
-
-[node name="Selection" type="Sprite2D" parent="Minion" unique_id=1464379356]
-visible = false
-z_index = -1
-position = Vector2(2.9999924, 14.000001)
-scale = Vector2(0.055234317, 0.022187503)
-texture = ExtResource("2_0xm2m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minion" unique_id=1517605881]
-shape = SubResource("CircleShape2D_0xm2m")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Minion" unique_id=647383038]
 
 [node name="Minion2" type="Minion" parent="." unique_id=1298129362]
 speed = 100.0

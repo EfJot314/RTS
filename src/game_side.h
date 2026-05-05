@@ -1,6 +1,9 @@
 #pragma once
 
 #include "building.h"
+#include "minion.h"
+
+#include <optional>
 
 #include <godot_cpp/classes/control.hpp>
 #include <godot_cpp/classes/packed_scene.hpp>
@@ -17,14 +20,20 @@ class GameSide : public Control {
 private:
     int side = 0;
     bool base_exists = false;
+    TypedArray<Barracks> barracks;
     TypedArray<CrystalsMine> crystals_mines;
     double crystals = 100;
     TypedArray<GasMine> gas_mines;
     double gas = 100;
 
+    bool setting_flag = false;
+    std::optional<Vector2> flag_position = std::nullopt;
+
     // ui
     Label* crystals_label = nullptr;
     Label* gas_label = nullptr;
+
+    bool flag_position_ok(Vector2 position);
 
 protected:
     static void _bind_methods();
@@ -34,6 +43,7 @@ public:
     void set_side(const int p_side);
 
     void on_building_button_pressed(String p_building_type);
+    void on_minion_button_pressed(String p_minion_type);
 
 	void _input(const Ref<InputEvent> &event) override;
 
@@ -42,6 +52,8 @@ public:
     void _process(double delta) override;
 
     void update_ui();
+
+    Minion* spawn_minion(String path);
 
     template <typename T>
     T* spawn_building(String path) {
